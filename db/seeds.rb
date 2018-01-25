@@ -20,3 +20,14 @@ categories.each do |row|
                   created_at: row[:created_at],
                   updated_at: row[:updated_at])
 end
+
+# items = CSV.open("data/items.csv", headers: true, header_converters: :symbol)
+#
+# items.each do |row|
+#   Item.create(title:       row[:name],
+#               description: row[:description],
+#               price:       row[:unit_price],
+#               image:       'data/images/default_item_img.jpg',
+#               created_at:  row[:created_at],
+#               updated_at:  row[:updated_at])
+# end
