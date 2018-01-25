@@ -21,3 +21,4 @@ class LittleShopApp < Sinatra::Base
   set :public_folder, File.join(APP_ROOT, "app", "public")
 end
 
+# /app/public

@@ -6,5 +6,6 @@ class CreateItems < ActiveRecord::Migration[5.1]
       t.decimal   :price
       t.text      :image
       t.timestamps null: false
+    end
   end
 end
