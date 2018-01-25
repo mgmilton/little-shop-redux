@@ -1,4 +1,4 @@
 class Category < ActiveRecord::Base
-  # validates :name, presecense: true, uniquness: true
+  validates :name, presence: true, uniqueness: true
 
 end
