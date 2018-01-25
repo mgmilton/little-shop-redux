@@ -10,7 +10,6 @@ class LittleShopApp < Sinatra::Base
 
   get '/merchants' do
     @merchants = Merchant.all
-    require "pry"; binding.pry
     erb :"merchants/index"
   end
 
@@ -30,7 +29,7 @@ class LittleShopApp < Sinatra::Base
 
     redirect '/merchants/index'
   end
-  
+
   get '/merchants/new' do
     erb :"merchants/new"
   end
