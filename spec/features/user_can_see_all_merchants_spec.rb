@@ -15,7 +15,8 @@ describe "As a user" do
       Merchant.create(name: "Matthew")
       Merchant.create(name: "Luis")
       Merchant.create(name: "Zac")
-        visit '/merchants'
+
+      visit '/merchants'
 
       expect(current_path).to eq("/merchants")
       expect(page).to have_content("All Merchants")
@@ -25,11 +26,22 @@ describe "As a user" do
 
     it "I can click merchants id link and go to specific merchant page" do
       Merchant.create(name: "bobbyboes", id: 777)
+
       visit '/merchants'
 
       click_on '777'
 
       expect(current_path).to eq('/merchants/777')
+    end
+
+    it "I can see and click the edit link to edit the merchant under merchant information" do
+      Merchant.create(name: "Spangles", id: 316)
+
+      visit '/merchants'
+
+      click_on 'Edit'
+
+      expect(current_path).to eq('/merchants/316/edit')
     end
   end
 end
