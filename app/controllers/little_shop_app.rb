@@ -1,5 +1,6 @@
 require_relative "../models/merchant.rb"
 require_relative "../models/category.rb"
+require_relative "../models/item.rb"
 
 class LittleShopApp < Sinatra::Base
   set :root, File.expand_path("..", __dir__)
@@ -46,7 +47,7 @@ class LittleShopApp < Sinatra::Base
   end
 
   get '/categories' do
-    @categories = categories.all
+    @categories = Category.all
     erb :"categories/index"
   end
 
@@ -59,14 +60,14 @@ class LittleShopApp < Sinatra::Base
     erb :"category/show"
   end
 
-  get '/merchants/:id/edit' do
+  get '/categoies/:id/edit' do
     @category = Category.find_by(id: params[:id])
     erb :"category/edit"
   end
 
-  post '/merchants' do
-    Category.create(params[:merchant])
-    redirect '/merchants'
+  post '/category' do
+    Category.create(params[:category])
+    redirect '/category'
   end
 
   put '/category/:id' do
@@ -81,4 +82,39 @@ class LittleShopApp < Sinatra::Base
     redirect '/category'
   end
 
+  get '/items' do
+    @items = items.all
+    erb :"items/index"
+  end
+
+  get '/items/new' do
+    erb :"items/new"
+  end
+
+  get '/items/:id' do
+    @item = Item.find_by(id: params[:id])
+    erb :"item/show"
+  end
+
+  get '/item/:id/edit' do
+    @item = Item.find_by(id: params[:id])
+    erb :"category/edit"
+  end
+
+  post '/item' do
+    Item.create(params[:item])
+    redirect '/item'
+  end
+
+  put '/category/:id' do
+    item = Item.find_by(id: params[:id])
+    item.update(name: params[:item].values.first)
+    redirect "/item/#{item.id}"
+  end
+
+  delete '/items/:id' do
+    item = Item.find_by(id: params[:id])
+    item.destroy
+    redirect '/item'
+  end
 end
