@@ -35,7 +35,7 @@ class LittleShopApp < Sinatra::Base
   end
 
   get '/merchants/:id' do
-    @merchant = Merchant.find_by(id: params[:id])
+    @merchant = Merchant.find(params[:id])
     erb :"merchants/show"
   end
 
