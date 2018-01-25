@@ -6,12 +6,12 @@ describe "As a user" do
 
       visit 'merchants/2'
 
-      expect(page).to have_content("Merchant Index")
+      expect(page).to have_text("Merchant Index")
     end
 
     it "When I click on merchant index link I go to merchants page" do
 
-      click_on 'Merchant Index'
+      click_link 'Merchant Index'
 
       expect(current_path).to eq('/merchants')
     end
