@@ -2,6 +2,7 @@ require 'pry'
 require 'csv'
 require_relative '../app/models/merchant.rb'
 require_relative '../app/models/category.rb'
+require_relative '../app/models/item.rb'
 
 merchants = CSV.open("data/merchants.csv", headers: true, header_converters: :symbol)
 
@@ -24,7 +25,8 @@ end
 items = CSV.open("data/items.csv", headers: true, header_converters: :symbol)
 
 items.each do |row|
-  Item.create(title:       row[:name],
+  Item.create(id:          row[:id],
+              name:        row[:name],
               description: row[:description],
               price:       row[:unit_price],
               image:       'data/images/default_item_img.jpg',
