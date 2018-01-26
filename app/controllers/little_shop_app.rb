@@ -66,13 +66,13 @@ class LittleShopApp < Sinatra::Base
   end
 
   post '/category' do
-    Category.create(params[:category])
+    Category.create(name: params[:category])
     redirect '/categories'
   end
 
   put '/category/:id' do
     category = Category.find(params[:id])
-    category.update(name: params[:category].values.first)
+    category.update(params[:category])
     redirect "/category/#{category.id}"
   end
 
@@ -108,7 +108,7 @@ class LittleShopApp < Sinatra::Base
 
   put '/category/:id' do
     item = Item.find(params[:id])
-    item.update(name: params[:item].values.first)
+    item.update(params[:item])
     redirect "/item/#{item.id}"
   end
 
