@@ -1,5 +1,9 @@
-<h1>All Items</h1>
+<head>
+  <link rel="stylesheet" href="stylesheets/main.css">
+</head>
 
+<h1>All Items</h1>
+<a href="/items/new">Create an item</a>
 <% @items.each do |item| %>
 <h3><a href="/items/<%= item.id %>"><%= item.id %></a></h3>
   <p><%= item.name %></p>
