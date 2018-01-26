@@ -40,7 +40,7 @@ describe "As a user" do
       visit '/merchants'
 
       click_on 'Edit'
-
+      
       expect(current_path).to eq('/merchants/316/edit')
     end
 

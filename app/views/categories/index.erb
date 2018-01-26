@@ -1,10 +1,13 @@
 <h1> All Categories </h1>
+<a href="/categories/new">Create a category</a>
 <% @categories.each do |category| %>
-<h3><a href= "/categories/<%= category.id %>"> <%= category.id%></a></h3>
+<div class="category_<%= category.id %>">
+  <p class="category_id_link"><a href= "/categories/<%= category.id %>"> <%= category.id%></a></p>
  <p><%= category.name%></p>
  <a href="/categories/<%= category.id%>/edit">Edit</a>
  <form action="/categories/<%= category.id %>" method= "POST">
    <input type="hidden" name="_method" value="DELETE">
    <input type="Submit" value="delete"/>
  </form>
+</div>
 <% end %>
