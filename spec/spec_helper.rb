@@ -9,9 +9,6 @@ require 'capybara/dsl'
 
 Capybara.app = LittleShopApp
 
-RSpec.configure do |c|
-  c.include Capybara::DSL
-end
 
 DatabaseCleaner.strategy = :truncation
 
@@ -22,4 +19,6 @@ RSpec.configure do |c|
   c.after(:each) do
     DatabaseCleaner.clean
   end
+  
+  c.include Capybara::DSL
 end

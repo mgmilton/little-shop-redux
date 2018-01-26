@@ -67,7 +67,7 @@ class LittleShopApp < Sinatra::Base
 
   post '/category' do
     Category.create(params[:category])
-    redirect '/category'
+    redirect '/categories'
   end
 
   put '/category/:id' do
