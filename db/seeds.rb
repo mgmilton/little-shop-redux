@@ -4,6 +4,10 @@ require_relative '../app/models/merchant.rb'
 require_relative '../app/models/category.rb'
 require_relative '../app/models/item.rb'
 
+Category.destroy_all
+Merchant.destroy_all
+Item.destroy_all
+
 merchants = CSV.open("data/merchants.csv", headers: true, header_converters: :symbol)
 categories = CSV.open("data/categories.csv", headers: true, header_converters: :symbol)
 items = CSV.open("data/items.csv", headers: true, header_converters: :symbol)
@@ -38,3 +42,4 @@ items.each do |row|
               created_at:  row[:created_at],
               updated_at:  row[:updated_at])
 end
+
