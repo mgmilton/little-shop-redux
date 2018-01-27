@@ -13,9 +13,6 @@
           <div class="item_name_input_box">
             <input type='text' name='item[name]' placeholder="Item Name"/><br/>
           </div>
-          <div class="item_id_input_box">
-            <input type='integer' name='item[id]' placeholder="Item Id"/><br/>
-          </div>
           <div class="item_description_input_box">
             <input type='description' name='item[description]' placeholder="Item Description"/><br/>
           </div>
@@ -26,6 +23,11 @@
             <input type='text' name='item[image]' placeholder="Insert Image"/><br/>
           </div>
         </div>
+        <select name='item[merchant]'>
+          <%@merchants.each do |merchant|%>
+            <option value= "<%=merchant %>"> <%=merchant.name %> </option>
+          <%end%>
+        </select>
         <input type='submit'/>
       </form>
   </body>
