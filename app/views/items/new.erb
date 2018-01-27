@@ -22,12 +22,17 @@
           <div class="item_image_input_box">
             <input type='text' name='item[image]' placeholder="Insert Image"/><br/>
           </div>
+          <select name='item[merchant_id]'>
+            <%@merchants.each do |merchant|%>
+              <option value= "<%=merchant%>"> <%=merchant.name %> </option>
+            <% end %>
+          </select>
+          <select name='item[category_id]'>
+            <%@categories.each do |category|%>
+              <option value= "<%=category%>"> <%=category.name %> </option>
+            <% end %>
+          </select>
         </div>
-        <select name='item[merchant]'>
-          <%@merchants.each do |merchant|%>
-            <option value= "<%=merchant %>"> <%=merchant.name %> </option>
-          <%end%>
-        </select>
         <input type='submit'/>
       </form>
   </body>
