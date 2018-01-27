@@ -103,6 +103,13 @@ class LittleShopApp < Sinatra::Base
     erb :"items/edit"
   end
 
+  get '/items-dashboard' do
+    @item = Item.all
+    @most_recent = Item.order(:created_at).last
+    @oldest = Item.order(:created_at).first
+    erb :"/items/dashboard"
+  end
+
   post '/items' do
     Item.create(params[:item])
     redirect '/items'
