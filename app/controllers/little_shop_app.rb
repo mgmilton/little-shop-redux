@@ -57,12 +57,12 @@ class LittleShopApp < Sinatra::Base
 
   get '/categories/:id' do
     @category = Category.find(params[:id])
-    erb :"category/show"
+    erb :"categories/show"
   end
 
   get '/categoies/:id/edit' do
     @category = Category.find(params[:id])
-    erb :"category/edit"
+    erb :"categories/edit"
   end
 
   post '/category' do
