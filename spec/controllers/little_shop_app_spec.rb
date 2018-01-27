@@ -13,5 +13,6 @@ describe LittleShopApp do
     post '/merchants', merchant: {name: 'BOBS BURGERS'} # need to pass params after the method call in hash format after a comma
 
     expect(Merchant.count).to eq(1)
+    expect(Merchant.first.name).to eq("BOBS BURGERS")
   end
 end
