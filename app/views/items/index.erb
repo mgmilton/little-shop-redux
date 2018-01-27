@@ -11,6 +11,7 @@
     <% @items.each do |item| %>
     <h3 class="all_items_id_link"><a href="/items/<%= item.id %>"><%= item.id %></a></h3>
       <p class="all_items_names"><%= item.name %></p>
+      <img src="<%= item.image %>" alt="Item Image" id="item_<%= item.id %>_image">
       <a href="/items/<%= item.id  %>/edit" class="all_items_edit">Edit</a>
       <form action="/items/<%= item.id %>" method="POST">
         <input type="hidden" name="_method" value="DELETE">
