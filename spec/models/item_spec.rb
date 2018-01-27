@@ -12,7 +12,6 @@ describe Item do
     end
   end
 
-
   describe "Validations" do
     context 'Item validations' do
       it "item entry is valid with name" do
