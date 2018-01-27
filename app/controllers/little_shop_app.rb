@@ -11,7 +11,7 @@ class LittleShopApp < Sinatra::Base
   end
 
   get '/merchants' do
-    @merchants = Merchant.all
+    @merchants = Merchant.order(:name)
     erb :"merchants/index"
   end
 
@@ -88,6 +88,8 @@ class LittleShopApp < Sinatra::Base
   end
 
   get '/items/new' do
+    @merchants = Merchant.all
+    @categories = Category.all
     erb :"items/new"
   end
 
@@ -99,6 +101,13 @@ class LittleShopApp < Sinatra::Base
   get '/item/:id/edit' do
     @item = Item.find(params[:id])
     erb :"items/edit"
+  end
+
+  get '/items-dashboard' do
+    @item = Item.all
+    @most_recent = Item.order(:created_at).last
+    @oldest = Item.order(:created_at).first
+    erb :"/items/dashboard"
   end
 
   post '/items' do
