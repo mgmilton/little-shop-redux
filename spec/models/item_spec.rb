@@ -11,7 +11,7 @@ describe Item do
       end
     end
 
-    describe ".average" do
+    describe ".average_price_per_item" do
       it "returns count of items" do
 
         Item.create(id: 1, name: "An item", description: "a real cool thing", price: 10, image: "data/images/default_item_img.jpg")
