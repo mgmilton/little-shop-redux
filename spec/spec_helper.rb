@@ -1,5 +1,4 @@
 ENV["RACK_ENV"] ||= "test"
-
 require 'bundler'
 Bundler.require(:default, :test)
 
@@ -8,6 +7,7 @@ require 'rspec'
 require 'capybara/rspec'
 
 Capybara.app = LittleShopApp
+Capybara.save_path = 'tmp/capybara'
 
 
 DatabaseCleaner.strategy = :truncation

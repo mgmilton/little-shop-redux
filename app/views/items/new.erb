@@ -1,7 +1,32 @@
-<form action="/items" method="post">
-  <p>Enter a new item:</p>
-  <input type='text' name='item[name]' value= "Name"/><br/>
-  <input type='description' name='item[description]' value= "Description"/><br/>
-  <input type='decimal' name='item[price]' value= "Price"/><br/>
-  <input type='Submit'/>
-</form>
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="utf-8">
+    <title>Bazaar Crystals</title>
+    <link rel="stylesheet" href="stylesheets/main.css">
+  </head>
+  <body>
+    <form action="/items" method="post">
+      <p>Enter a new item:</p>
+      <div class="item_input_field">
+        <div class="name_box">
+          <div class="item_name_input_box">
+            <input type='text' name='item[name]' placeholder="Item Name"/><br/>
+          </div>
+          <div class="item_id_input_box">
+            <input type='integer' name='item[id]' placeholder="Item Id"/><br/>
+          </div>
+          <div class="item_description_input_box">
+            <input type='description' name='item[description]' placeholder="Item Description"/><br/>
+          </div>
+          <div class="item_price_input_box">
+            <input type='decimal' name='item[price]' placeholder="Item Price"/><br/>
+          </div>
+          <div class="item_image_input_box">
+            <input type='text' name='item[image]' placeholder="Insert Image"/><br/>
+          </div>
+        </div>
+        <input type='submit'/>
+      </form>
+  </body>
+  </html>

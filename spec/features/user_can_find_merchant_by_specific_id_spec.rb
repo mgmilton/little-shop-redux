@@ -14,7 +14,7 @@ describe "As a user" do
 
       visit 'merchants/2'
 
-      click_link 'Merchant Index'
+      click_link 'merchant_index'
 
       expect(current_path).to eq('/merchants')
     end
