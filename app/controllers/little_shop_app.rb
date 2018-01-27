@@ -98,7 +98,6 @@ class LittleShopApp < Sinatra::Base
 
   get '/item/:id/edit' do
     @item = Item.find(params[:id])
-    require "pry"; binding.pry
     erb :"items/edit"
   end
 
