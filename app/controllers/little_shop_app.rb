@@ -57,29 +57,29 @@ class LittleShopApp < Sinatra::Base
 
   get '/categories/:id' do
     @category = Category.find(params[:id])
-    erb :"category/show"
+    erb :"categories/show"
   end
 
-  get '/categoies/:id/edit' do
+  get '/categories/:id/edit' do
     @category = Category.find(params[:id])
-    erb :"category/edit"
+    erb :"categories/edit"
   end
 
-  post '/category' do
+  post '/categories' do
     Category.create(params[:category])
-    redirect '/category'
+    redirect '/categories'
   end
 
-  put '/category/:id' do
+  put '/categories/:id' do
     category = Category.find(params[:id])
-    category.update(name: params[:category].values.first)
-    redirect "/category/#{category.id}"
+    category.update(params[:category])
+    redirect "/categories/#{category.id}"
   end
 
-  delete '/category/:id' do
+  delete '/categories/:id' do
     category = Category.find(params[:id])
     category.destroy
-    redirect '/category'
+    redirect '/categories'
   end
 
   get '/items' do
@@ -93,28 +93,28 @@ class LittleShopApp < Sinatra::Base
 
   get '/items/:id' do
     @item = Item.find(params[:id])
-    erb :"item/show"
+    erb :"items/show"
   end
 
   get '/item/:id/edit' do
     @item = Item.find(params[:id])
-    erb :"item/edit"
+    erb :"items/edit"
   end
 
-  post '/item' do
+  post '/items' do
     Item.create(params[:item])
-    redirect '/item'
+    redirect '/items'
   end
 
-  put '/category/:id' do
+  put '/items/:id' do
     item = Item.find(params[:id])
-    item.update(name: params[:item].values.first)
-    redirect "/item/#{item.id}"
+    item.update(params[:item])
+    redirect "/items/#{item.id}"
   end
 
   delete '/items/:id' do
     item = Item.find(params[:id])
     item.destroy
-    redirect '/item'
+    redirect '/items'
   end
 end

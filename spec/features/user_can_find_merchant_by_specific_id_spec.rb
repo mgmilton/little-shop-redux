@@ -10,8 +10,11 @@ describe "As a user" do
     end
 
     it "When I click on merchant index link I go to merchants page" do
+      Merchant.create(name: "Georginas Nails", id: 2)
 
-      click_link 'merchant_index'
+      visit 'merchants/2'
+
+      click_link 'Merchant Index'
 
       expect(current_path).to eq('/merchants')
     end
