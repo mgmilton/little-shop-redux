@@ -6,17 +6,37 @@
     <link rel="stylesheet" href="/stylesheets/main.css" title= "text/css" />
     <link rel="shortcut icon" type="image/x-icon" href="/images/om-favicon.ico">
   </head>
-  <div class="topnav">
+  <body>
     <h1>Welcome to the Man Down by the River&#39;s Emporium</h1>
-  </div> <!-- Close top_nav -->
-  <body background="/images/hippie-young-woman-meditating.jpg">
-    <nav>
-      <a href="/merchants">Merchant Index</a>
-      <a href="/merchants/new">New Merchant</a>
-      <a href="/categories">Category Index</a>
-      <a href="/categories/new">New Category</a>
-      <a href="/items">Item Index</a>
-      <a href="/items/new">New Item</a>
-    </nav>
+
+    <ul>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Merchants</a>
+          <div class="dropdown-content">
+            <a href="/merchants">Merchant Index</a>
+            <a href="/merchants/new">New Merchant</a>
+            <a href="/merchants-dashboard">Merchant Metrics</a>
+        </div>
+      </li>
+
+
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Item Categories</a>
+          <div class="dropdown-content">
+            <a href="/categories">Category Index</a>
+            <a href="/categories/new">New Category</a>
+            <a href="/categories-dashboard">Category Metrics</a>
+        </div>
+      </li>
+
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Items</a>
+          <div class="dropdown-content">
+            <a href="/items">Item Index</a>
+            <a href="/items/new">New Item</a>
+            <a href="/items-dashboard">Item Metrics</a>
+        </div>
+      </li>
+    </ul>
   </body>
 </html>
