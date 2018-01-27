@@ -1,4 +1,29 @@
 describe Item do
+  describe "Class Methods" do
+    describe ".total" do
+      it "returns count of items" do
+
+        Item.create(id: 1, name: "An item", description: "a real cool thing", price: 5, image: "data/images/default_item_img.jpg")
+
+        Item.create(id: 3, name: "A new item", description: "a thing", price: 5, image: "data/images/default_item_img.jpg")
+
+        expect(Item.total).to eq(2)
+      end
+    end
+
+    describe ".average" do
+      it "returns count of items" do
+
+        Item.create(id: 1, name: "An item", description: "a real cool thing", price: 10, image: "data/images/default_item_img.jpg")
+
+        Item.create(id: 3, name: "A new item", description: "a thing", price: 15, image: "data/images/default_item_img.jpg")
+
+        expect(Item.average_price_per_item).to eq(6.25)
+      end
+    end
+  end
+
+
   describe "Validations" do
     context 'Item validations' do
       it "item entry is valid with name" do
