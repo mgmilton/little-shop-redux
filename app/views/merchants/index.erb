@@ -8,7 +8,7 @@
 <h1>All Merchants</h1>
 <a href="/merchants/new">Create a merchant</a>
 <% @merchants.each do |merchant| %>
-<div class="merchant_<%= merchant.id %>">
+<div class="merchant<%= merchant.id %>">
   <p class="merch_id_link"><a href="/merchants/<%= merchant.id %>"><%= merchant.id %></a></p>
   <p><%= merchant.name %></p>
   <a href="/merchants/<%= merchant.id  %>/edit">Edit</a>

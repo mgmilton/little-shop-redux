@@ -4,9 +4,6 @@ describe "As a user" do
       visit '/merchants/new'
 
       fill_in "merchant[name]", with: "Buisness Name"
-      fill_in "merchant[id]", with: "2"
-      fill_in "task[description]", with: "We do things, and stuff"
-
       click_on 'Submit'
 
       expect(current_path).to eq('/merchants')
