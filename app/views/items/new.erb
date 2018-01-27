@@ -1,9 +1,22 @@
 <form action="/items" method="post">
   <p>Enter a new item:</p>
-  <input type='text' name='item[name]'/><br/>
-  <input type='integer' name='item[id]'/><br/>
-  <input type='description' name='item[description]'/><br/>
-  <input type='decimal' name='item[price]'/><br/>
-  <input type='text' name='item[image]'/><br/>
+    <div class="item_input_field">
+      <div class="name_box">
+        <div class="name_input_box">
+          <input type='text' name='item[name]' placeholder="Item Name"/><br/>
+        </div>
+        <div class="id_input_box">
+          <input type='integer' name='item[id]' placeholder="Item Id"/><br/>
+        </div>
+        <div class="description_input_box">
+          <input type='description' name='item[description]' placeholder="Item Description"/><br/>
+        </div>
+        <div class="price_input_box">
+          <input type='decimal' name='item[price]' placeholder="Item Price"/><br/>
+        </div>
+        <div class="image_input_box">
+          <input type='text' name='item[image]' placeholder="Insert Image"/><br/>
+        </div>
+      </div>
   <input type='submit'/>
 </form>
