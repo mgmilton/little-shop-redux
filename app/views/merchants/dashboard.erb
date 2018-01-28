@@ -8,12 +8,22 @@
     <link rel="shortcut icon" type="image/x-icon" href="/images/om-favicon.ico">
   </head>
   <h1>Merchant Metrics</h1>
-  <div class="highest_merchant">
+  <!-- check styles of item metrics -->
     <p>Golden Merchant</p>
-    <%= @merchant.name %>
-    <%= @merchant.id %>
+    <%= @golden_merchant.name %>
+    <%= @golden_merchant.id %>
     <%= @item.name %>
     <%= @item.price %>
+    <p>Most Item Merchant</p>
+    <%= @high_item_merchant %>
+    _______________________________________
+    <p>Merchant / Item Breakdown</p>
+      <% @merchants.each do |merchant| %>
+      Merchant Name: <%= merchant.name %>
+      Item Count: <%= merchant.items_count %>
+      Sum Of All Items: <%= merchant.item_total_sum %>
+      _______________________________________
+      <% end %>
   </div>
   <ul>
   </ul>
