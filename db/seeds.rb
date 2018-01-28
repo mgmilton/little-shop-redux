@@ -38,8 +38,7 @@ items.each do |row|
               price:       row[:unit_price],
               merchant_id: row[:merchant_id],
               category_id: category_id_cycle.next ,
-              image:       'data/images/default_item_img.jpg',
+              image:       "http://ask-angels.swellpress.netdna-cdn.com/wp-content/uploads/2014/10/healing-crystals-1024x292.jpg",
               created_at:  row[:created_at],
               updated_at:  row[:updated_at])
 end
-

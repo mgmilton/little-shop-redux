@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Avalon&#39;s Altar</title>
-    <link rel="stylesheet" href="stylesheets/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poiret+One">
+    <link rel="stylesheet" href="/stylesheets/index.css">
     <link rel="shortcut icon" type="image/x-icon" href="/images/om-favicon.ico">
   </head>
   <body>
@@ -12,7 +13,7 @@
     <% @items.each do |item| %>
     <h3 class="all_items_id_link"><a href="/items/<%= item.id %>"><%= item.id %></a></h3>
       <p class="all_items_names"><%= item.name %></p>
-      <img src=<%= url(item.image)%> " alt="Item Image" id="item_<%= item.id %>_image">
+      <img class= "itemimage" src=<%=item.image %>>
       <a href="/items/<%= item.id  %>/edit" class="all_items_edit">Edit</a>
       <form action="/items/<%= item.id %>" method="POST">
         <input type="hidden" name="_method" value="DELETE">

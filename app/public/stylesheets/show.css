@@ -1,0 +1,14 @@
+html {
+	margin: 0;
+	padding: 0;
+	font-family: "Poiret One";
+	color: #AAC4B4;
+}
+
+body {
+	background: #fff url( "/images/hippie-young-woman-meditating.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}

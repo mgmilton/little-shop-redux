@@ -16,6 +16,11 @@ body {
 	background-size: cover;
 }
 
+input {
+	font-family: "Poiret One";
+	color: #AAC4B4;
+}
+
 ul {
 		float: right;
 		width: 12%;
