@@ -10,4 +10,7 @@ class Item < ActiveRecord::Base
     average(:price).round(2)
   end
 
+  def self.highest_item
+    order(price: :desc).first
+  end
 end
