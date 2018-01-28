@@ -70,6 +70,12 @@ class LittleShopApp < Sinatra::Base
   end
 
   get '/categories-dashboard' do
+    @categories = Category.all
+    @itemscategory1 = Item.where(category_id: 1)
+    @itemscategory2 = Item.where(category_id: 2)
+    @itemscategory3 = Item.where(category_id: 3)
+    @itemscategory4 = Item.where(category_id: 4)
+    @itemscategory5 = Item.where(category_id: 5)
     erb :"/categories/dashboard"
   end
 

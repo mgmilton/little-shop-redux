@@ -9,4 +9,5 @@ class Item < ActiveRecord::Base
   def self.average_price_per_item
     average(:price).round(2)
   end
+
 end
