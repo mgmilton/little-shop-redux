@@ -29,6 +29,10 @@ class LittleShopApp < Sinatra::Base
     erb :"merchants/edit"
   end
 
+  get '/merchants-dashboard' do
+    erb :"/merchants/dashboard"
+  end
+
   post '/merchants' do
     Merchant.create(params[:merchant])
     redirect '/merchants'
@@ -63,6 +67,16 @@ class LittleShopApp < Sinatra::Base
   get '/categories/:id/edit' do
     @category = Category.find(params[:id])
     erb :"categories/edit"
+  end
+
+  get '/categories-dashboard' do
+    @categories = Category.all
+    @itemscategory1 = Item.where(category_id: 1)
+    @itemscategory2 = Item.where(category_id: 2)
+    @itemscategory3 = Item.where(category_id: 3)
+    @itemscategory4 = Item.where(category_id: 4)
+    @itemscategory5 = Item.where(category_id: 5)
+    erb :"/categories/dashboard"
   end
 
   post '/categories' do
