@@ -6,10 +6,12 @@
   <link rel="stylesheet" href="stylesheets/main.css">
   <link rel="shortcut icon" type="image/x-icon" href="/images/om-favicon.ico">
 </head>
+<body background="/images/hippie-young-woman-meditating.jpg">
   <form action="/categories/<%= @category.id %>" method="POST">
     <p>Edit</p>
     <input type="hidden" name="_method" value="PUT" />
     <input type='text' name='category[name]' value="<%= @category.name %>"/><br/>
     <input type='Submit'/>
   </form>
+</body>
 </html>
