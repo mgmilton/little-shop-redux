@@ -7,6 +7,6 @@ class Item < ActiveRecord::Base
   belongs_to :categories
 
   def self.average_price_per_item
-    (average(:price)/count).floor(2)
+    average(:price).round(2)
   end
 end
