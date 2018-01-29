@@ -27,7 +27,7 @@ describe "As a user" do
 
       visit '/categories'
 
-      click_on '666'
+      click_on 'Food'
 
       expect(current_path).to eq('/categories/666')
       expect(page.status_code).to eq(200)

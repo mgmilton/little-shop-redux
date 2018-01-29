@@ -11,8 +11,7 @@
     <h1>All Items</h1>
     <a href="/items/new">Create an item</a>
     <% @items.each do |item| %>
-    <h3 class="all_items_id_link"><a href="/items/<%= item.id %>"><%= item.id %></a></h3>
-      <p class="all_items_names"><%= item.name %></p>
+      <h3 class="all_items_id_link"><a href="/items/<%= item.id %>"><%= item.name %></a></h3>
       <img class= "itemimage" src=<%=item.image %>>
       <a href="/items/<%= item.id  %>/edit" class="all_items_edit">Edit</a>
       <form action="/items/<%= item.id %>" method="POST">
