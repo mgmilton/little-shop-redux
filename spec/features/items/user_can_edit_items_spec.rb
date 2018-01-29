@@ -7,7 +7,8 @@ describe "As a user" do
       click_link('Edit')
 
       expect(current_path).to eq('/items/1/edit')
-      page.has_content?('itemtime')
+      expect(page.status_code).to eq(200)
+      page.has_content?('Edit')
     end
   end
 end
