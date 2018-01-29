@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20180127183145) do
     t.text "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "item_count", default: 0
   end
 
 end
