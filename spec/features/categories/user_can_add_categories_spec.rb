@@ -8,6 +8,7 @@ describe "As a user" do
 
 
         expect(current_path).to eq("/categories")
+        expect(page.status_code).to eq(200)
         expect(Category.count).to eq(1)
       end
     end

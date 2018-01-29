@@ -6,6 +6,7 @@ describe "As a user" do
       visit 'items/44'
 
       expect(page).to have_text("itemtime")
+      expect(page.status_code).to eq(200)
       end
 
       it "When I click on item index link I go to categories page" do
@@ -16,6 +17,7 @@ describe "As a user" do
         click_link 'Items Index'
 
         expect(current_path).to eq('/items')
+        expect(page.status_code).to eq(200)
     end
   end
 end

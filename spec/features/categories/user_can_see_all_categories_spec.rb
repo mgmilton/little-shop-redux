@@ -16,6 +16,7 @@ describe "As a user" do
       visit '/categories'
 
       expect(current_path).to eq("/categories")
+      expect(page.status_code).to eq(200)
       expect(page).to have_content("All Categories")
       expect(page).to have_content("Food")
       expect(Category.count).to eq(3)
@@ -29,6 +30,7 @@ describe "As a user" do
       click_on '666'
 
       expect(current_path).to eq('/categories/666')
+      expect(page.status_code).to eq(200)
     end
 
     it "I can see and click the edit link to edit the category under category information" do
@@ -39,6 +41,7 @@ describe "As a user" do
       click_on 'Edit'
 
       expect(current_path).to eq('/categories/3000/edit')
+      expect(page.status_code).to eq(200)
     end
   end
 end
