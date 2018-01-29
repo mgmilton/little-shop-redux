@@ -7,7 +7,7 @@ describe Item do
 
         Item.create(id: 3, name: "A new item", description: "a thing", price: 15, image: "data/images/default_item_img.jpg")
 
-        expect(Item.average_price_per_item).to eq(12.5)
+        expect(Item.average_price_per_item).to eq(0.13e0)
       end
     end
   end
