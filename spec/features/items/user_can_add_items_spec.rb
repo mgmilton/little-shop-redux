@@ -6,6 +6,7 @@ describe "As a user" do
 
       click_link 'Create an item'
       expect(current_path).to eq('/items/new')
+      expect(page.status_code).to eq(200)
     end
   end
 end
