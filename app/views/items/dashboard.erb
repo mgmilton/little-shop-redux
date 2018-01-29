@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="stylesheets/metrics.css">
     <link rel="shortcut icon" type="image/x-icon" href="/images/om-favicon.ico">
   </head>
-  <h1>Item Metrics</h1>
-  <ul>
-    <li>Total Items: <%= @item.all.count%> </li>
-    <li>Average Price Per Item: $<%= @item.average_price_per_item %> </li>
-    <li>Most Recently Created Item: <%= @most_recent.name %> </li>
-    <li>Oldest Item: <%= @oldest.name %></li>
-  </ul>
-  <div id="infinity" ></div>
+    <h1>Item Metrics</h1>
+      <ul>
+        <li>Total Items: <%= @item.all.count%> </li>
+        <li>Average Price Per Item: <%= @item.average_price_per_item %> </li>
+        <li>Most Recently Created Item: <%= @most_recent.name %> </li>
+        <li>Oldest Item: <%= @oldest.name %></li>
+      </ul>
+  <div id="infinity"></div>
 </html>
