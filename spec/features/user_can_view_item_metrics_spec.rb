@@ -10,9 +10,10 @@ describe "As a user" do
 
       expect(current_path).to eq('/items-dashboard')
       expect(page).to have_content(2)
-      expect(page).to have_content(5.0)
+      expect(page).to have_content(0.05)
       expect(page).to have_content("An item")
       expect(page).to have_content("A new item")
+      expect(page.status_code).to eq(200)
     end
   end
 end
