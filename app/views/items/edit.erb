@@ -11,10 +11,10 @@
   <form action="/items/<%= @item.id %>" method="POST">
     <p>Edit</p>
     <input type="hidden" name="_method" value="PUT" />
-    <input type='text' name='item[name]' value="<%= @item.name %>"/><br/>
-    <input type='text' name='item[description]' value="<%= @item.name %>"/><br/>
-    <input type='decimal' name='item[price]' value="<%= @item.name %>"/><br/>
-    <input type='text' name='item[image]' value="<%= @item.name %>"/><br/>
+    <input type='text' name='item[name]' value="Name"/><br/>
+    <input type='text' name='item[description]' value="Description"</><br/>
+    <input type='decimal' name='item[price]' value="Price"/><br/>
+    <input type='text' name='item[image]' value="Image URL"/><br/>
     <input type='submit'/>
   </form>
 </body>
