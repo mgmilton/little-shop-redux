@@ -2,4 +2,9 @@ html {
 	margin: 0;
 	padding: 0;
 	font-family: "Poiret One";
+	color: #AAC4B4;
+}
+
+img {
+	border-radius: 8px;
 }

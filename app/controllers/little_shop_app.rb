@@ -80,6 +80,8 @@ class LittleShopApp < Sinatra::Base
     @itemscategory3 = Item.where(category_id: 3)
     @itemscategory4 = Item.where(category_id: 4)
     @itemscategory5 = Item.where(category_id: 5)
+    @most_expensive_id = Item.all.order(:price).last.category_id
+    @least_expensive_id = Item.all.order(:price).first.category_id
     erb :"/categories/dashboard"
   end
 

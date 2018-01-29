@@ -9,11 +9,13 @@
   </head>
   <h1>Category Metrics</h1>
   <ul>
-    <li>Average price per <%= @categories[0].name%>: $<%= @itemscategory1.average_price_per_item %></li>
-    <li>Average price per <%= @categories[1].name%>: $ <%= @itemscategory2.average_price_per_item %></li>
-    <li>Average price per <%= @categories[2].name%>: $ <%= @itemscategory3.average_price_per_item%></li>
-    <li>Average price per <%= @categories[3].name%>: $ <%= @itemscategory4.average_price_per_item%></li>
-    <li>Average price per <%= @categories[4].name%>: $ <%= @itemscategory5.average_price_per_item%></li>
+    <li>Average Item price for <%= @categories[0].name%>: $<%= @itemscategory1.average_price_per_item %></li>
+    <li>Average Item price for <%= @categories[1].name%>: $ <%= @itemscategory2.average_price_per_item %></li>
+    <li>Average Item price for <%= @categories[2].name%>: $ <%= @itemscategory3.average_price_per_item%></li>
+    <li>Average Item price for <%= @categories[3].name%>: $ <%= @itemscategory4.average_price_per_item%></li>
+    <li>Average Item price for <%= @categories[4].name%>: $ <%= @itemscategory5.average_price_per_item%></li>
+    <li>Category with Most Expensive Item: <%= @categories[@most_expensive_id - 1].name %></li>
+    <li>Category with Least Expensive Item: <%= @categories[@least_expensive_id - 1].name %></li>
   </ul>
   <div id="infinity"/>
 </html>
