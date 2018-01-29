@@ -3,19 +3,13 @@ class Merchant < ActiveRecord::Base
 
   has_many :items
 
-  def items_count
-    self.items.count
-  end
-
   def item_total_sum
     self.items.sum(:price)
   end
 
   def self.most_items
-    select("merchants.id, count(items.id) AS items_count").
-    joins(:items).
-    group("merchants.id").
-    order("items_count DESC")
+    max = maximum(:item_count)
+    find_by_item_count(max)
   end
 end
 

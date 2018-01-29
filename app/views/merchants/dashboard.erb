@@ -15,15 +15,16 @@
     <%= @item.name %>
     <%= @item.price %>
     <p>Most Item Merchant</p>
-    <%= @high_item_merchant %>
+    <%= @high_item_merchant.name %>
+    Item : <%= @high_item_merchant.items.count %>
     _______________________________________
     <p>Merchant / Item Breakdown</p>
       <% @merchants.each do |merchant| %>
       Merchant Name: <%= merchant.name %>
-      Item Count: <%= merchant.items_count %>
+      Item Count: <%= merchant.item_count %>
       Sum Of All Items: <%= merchant.item_total_sum %>
-      _______________________________________
       <% end %>
+      _______________________________________
   </div>
   <ul>
   </ul>
