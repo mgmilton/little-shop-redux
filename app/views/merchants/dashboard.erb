@@ -10,22 +10,28 @@
   <h1>Merchant Metrics</h1>
   <!-- check styles of item metrics -->
     <p>Golden Merchant</p>
-    <%= @golden_merchant.name %>
-    <%= @golden_merchant.id %>
-    <%= @item.name %>
-    <%= @item.price %>
+      <ul>
+        <li><%= @golden_merchant.name %></li>
+        <li><%= @golden_merchant.id %></li>
+        <li><%= @item.name %></li>
+        <li><%= @item.price %></li>
+      </ul>
     <p>Most Item Merchant</p>
+    <ul>
     <%= @high_item_merchant.name %>
-    Item : <%= @high_item_merchant.items.count %>
-    _______________________________________
-    <p>Merchant / Item Breakdown</p>
-      <% @merchants.each do |merchant| %>
-      Merchant Name: <%= merchant.name %>
-      Item Count: <%= merchant.item_count %>
-      Sum Of All Items: <%= merchant.item_total_sum %>
-      <% end %>
-      _______________________________________
-  </div>
+    <li>Item : <%= @high_item_merchant.items.count %></li>
+  </ul>
+    <div class="all_merchants_breakdown"
+      <p>Merchant / Item Breakdown</p>
+        <% @merchants.each do |merchant| %>
+        <ul>
+          <li>Merchant Name: <%= merchant.name %></li>
+          <li>Item Count: <%= merchant.item_count %></li>
+          <li>Sum Price Of All Items: <%= merchant.item_total_sum %></li>
+        </ul>
+        <% end %>
+        _______________________________________
+    </div>
   <ul>
   </ul>
   <div id="infinity"/>
