@@ -13,6 +13,7 @@ describe "Merchants/New" do
       click_on('submit')
 
       expect(current_path).to eq('/merchants')
+      expect(page).to have_content('All Merchants')
       expect(page).to have_link('1')
       expect(page).to have_text('Buisness Name')
       expect(page).to have_link('Edit')
