@@ -17,10 +17,3 @@ describe "Merchants/New" do
     end
   end
 end
-
-# find_link('Hello').visible?
-
-
-# expect(Merchant.count).to eq(1)
-# expect(page).to have_content('1')
-# expect(page).to have_content('Buisness Name')
