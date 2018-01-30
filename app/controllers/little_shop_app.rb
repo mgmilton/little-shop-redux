@@ -6,6 +6,11 @@ class LittleShopApp < Sinatra::Base
   set :root, File.expand_path("..", __dir__)
   set :method_override, true
 
+  not_found do
+    status 404
+    erb :error
+  end
+
   get '/' do
     erb :dashboard
   end
