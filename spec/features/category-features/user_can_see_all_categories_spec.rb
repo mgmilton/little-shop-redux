@@ -1,0 +1,44 @@
+describe "As a user" do
+  context "when I visit categories path" do
+    it "I can see and click new category link and go to new category page from link" do
+      visit '/categories'
+
+      click_on "Create a category"
+
+      expect(current_path).to eq('/categories/new')
+    end
+
+    it "I can see all categories displayed" do
+      Category.create(name: "Food")
+      Category.create(name: "Recreation")
+      Category.create(name: "Sports")
+
+      visit '/categories'
+
+      expect(current_path).to eq("/categories")
+      expect(page).to have_content("All Categories")
+      expect(page).to have_content("Food")
+      expect(Category.count).to eq(3)
+    end
+
+    it "I can click category id link and go to specific category page" do
+      Category.create(name: "Food", id: 666)
+
+      visit '/categories'
+
+      click_on '666'
+
+      expect(current_path).to eq('/categories/666')
+    end
+
+    it "I can see and click the edit link to edit the category under category information" do
+      Category.create(name: "Food", id: 3000)
+
+      visit '/categories'
+
+      click_on 'Edit'
+
+      expect(current_path).to eq('/categories/3000/edit')
+    end
+  end
+end
