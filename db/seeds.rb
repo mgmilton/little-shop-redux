@@ -22,7 +22,6 @@ end
 merchants.each do |row|
   Merchant.create(id:         row[:id],
                   name:       row[:name],
-                  item_count: 0,
                   created_at: row[:created_at],
                   updated_at: row[:updated_at])
 end
@@ -46,4 +45,3 @@ end
 Merchant.all.each do |merchant|
   merchant.update_attributes(:item_count => merchant.items.count)
 end
-
