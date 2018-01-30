@@ -21,6 +21,7 @@ describe "As a user" do
       expect(current_path).to eq("/merchants")
       expect(page).to have_content("All Merchants")
       expect(page).to have_content("Holly")
+      expect(page).to have_content("Zac")
       expect(Merchant.count).to eq(6)
     end
 
@@ -40,18 +41,17 @@ describe "As a user" do
       visit '/merchants'
 
       click_on 'Edit'
-      
+
       expect(current_path).to eq('/merchants/316/edit')
     end
 
     it "I can see and click the delete button to delete a specific merchant and only see remaining merchants" do
       Merchant.create(name: "thing", id: 1)
-      # TODO fix this test, still not working
+
       visit '/merchants'
-      # find('.delete_button_2').click
-      # within(".merchants_#{m2}") do
-        click_on 'delete'
-      # end
+
+      click_on 'delete'
+
       expect(Merchant.count).to eq(0)
     end
   end

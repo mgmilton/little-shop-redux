@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>Avalon&#39;s Altar</title>
@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="stylesheets/show.css">
     <link rel="shortcut icon" type="image/x-icon" href="/images/om-favicon.ico">
   </head>
+  <nav class="navbar">
+    <!-- <div class="merch-dashboard-nav"> -->
+      <h1><a href="/">Home</a></h1>
+      <h1><a href="/merchants">All Merchants</a></h1>
+      <h1><a href="/items">All Items</a></h1>
+      <h1><a href="/categories">Categories</a></h1>
+    <!-- </div> -->
+  </nav>
   <h1>Merchant Metrics</h1>
     <p>Golden Merchant</p>
       <ul>
@@ -18,7 +26,7 @@
     <p>Most Item Merchant</p>
     <ul>
     <%= @high_item_merchant.name %>
-    <li>Item : <%= @high_item_merchant.items.count %></li>
+    <li>Item Count: <%= @high_item_merchant.items.count %></li>
   </ul>
     <div class="all_merchants_breakdown"
       <p>Merchant / Item Breakdown</p>
@@ -33,5 +41,5 @@
     </div>
   <ul>
   </ul>
-  <div id="infinity"/>
+  <div id="infinity"></div>
 </html>
