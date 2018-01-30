@@ -13,4 +13,8 @@ class Item < ActiveRecord::Base
   def self.highest_item
     order(price: :desc).first
   end
+
+  def self.slice_by_name(letter)
+    where("name like ?", "#{letter}%")
+  end
 end

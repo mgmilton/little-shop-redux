@@ -57,7 +57,7 @@ describe "As a user" do
 
       visit('/items')
 
-      click_on('delete')
+      click_on('Delete')
 
       expect(Item.count).to eq(0)
       expect(page.status_code).to eq(200)

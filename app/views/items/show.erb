@@ -8,11 +8,16 @@
     <link rel="shortcut icon" type="image/x-icon" href="/images/om-favicon.ico">
   </head>
   <body>
-    <a href="/items">Items Index</a>
     <h1><%= @item.name %></h1>
     <p><%= @item.id %></p>
     <p><%= @item.description %></p>
-    <p><%= @item.price %></p>
-    <p><%= @item.image %></p>
+    <p><%= @item.price %> cents</p>
   </body>
+
+  <div class="navbar">
+    <a href="/">Home</a>
+    <a href="/items">Items</a>
+    <a href="/categories">Categories</a>
+    <a href="/merchants">Merchants</a>
+  </div>
 </html>
