@@ -21,6 +21,7 @@ describe "As a user" do
       expect(current_path).to eq("/merchants")
       expect(page).to have_content("All Merchants")
       expect(page).to have_content("Holly")
+      expect(page).to have_content("Zac")
       expect(Merchant.count).to eq(6)
     end
 

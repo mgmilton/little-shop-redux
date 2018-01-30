@@ -2,7 +2,6 @@ describe "Merchants/New" do
   context "As a user, when I visit new merchants path" do
     it "I see the information needed to enter merchant data" do
       visit '/merchants/new'
-
       expect(page).to have_content('Enter a new merchant:')
       expect(page).to have_button('submit')
       expect(page).to have_field('Merchant Name', type: 'text')
@@ -14,6 +13,10 @@ describe "Merchants/New" do
       click_on('submit')
 
       expect(current_path).to eq('/merchants')
+      expect(page).to have_link('1')
+      expect(page).to have_text('Buisness Name')
+      expect(page).to have_link('Edit')
+      expect(page).to have_button('delete')
     end
   end
 end
