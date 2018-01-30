@@ -7,14 +7,18 @@
   <link rel="stylesheet" href="/stylesheets/index.css">
   <link rel="shortcut icon" type="image/x-icon" href="/images/om-favicon.ico">
 </head>
+  <body>
   <h1> All Categories </h1>
   <a href="/categories/new">Create a category</a>
   <% @categories.each do |category| %>
-  <h3><a href="/categories/<%= category.id %>"> <%= category.name %></a></h3>
-   <a href="/categories/<%= category.id%>/edit">Edit</a>
-   <form action="/categories/<%= category.id %>" method= "POST">
-     <input type="hidden" name="_method" value="DELETE">
-     <input type="Submit" value="Delete"/>
-   </form>
+  <div class="box">
+    <a href="/categories/<%= category.id %>"> <%= category.name %></a>
+    <a href="/categories/<%= category.id%>/edit">Edit</a>
+    <form action="/categories/<%= category.id %>" method= "POST">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="Submit" value="Delete"/>
+    </form>
+  </div>
   <% end %>
+</body>
 </html>
