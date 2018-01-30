@@ -7,7 +7,7 @@ describe LittleShopApp do
   it "at the root level'" do
     get '/'
 
-    expect(last_response.body.length).to eq(1500)
+    expect(last_response.body.length).to eq(1416)
   end
 
   it "can successfully create merchant" do

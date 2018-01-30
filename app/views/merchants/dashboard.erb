@@ -8,12 +8,10 @@
     <link rel="shortcut icon" type="image/x-icon" href="/images/om-favicon.ico">
   </head>
   <nav class="navbar">
-    <!-- <div class="merch-dashboard-nav"> -->
       <h1><a href="/">Home</a></h1>
       <h1><a href="/merchants">All Merchants</a></h1>
       <h1><a href="/items">All Items</a></h1>
       <h1><a href="/categories">Categories</a></h1>
-    <!-- </div> -->
   </nav>
   <h1>Merchant Metrics</h1>
     <p>Golden Merchant</p>
@@ -33,11 +31,10 @@
         <% @merchants.each do |merchant| %>
         <ul>
           <li>Merchant Name: <%= merchant.name %></li>
-          <li>Item Count: <%= merchant.item_count %></li>
+          <li>Item Count: <%= merchant.items.count%></li>
           <li>Sum Price Of All Items: <%= merchant.item_total_sum %></li>
         </ul>
         <% end %>
-        _______________________________________
     </div>
   <ul>
   </ul>
