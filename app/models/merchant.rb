@@ -8,7 +8,10 @@ class Merchant < ActiveRecord::Base
   end
 
   def self.most_items
-    max = maximum(:item_count)
-    find_by_item_count(max)
+    left_outer_joins(:items).
+    distinct.select('merchants.*, COUNT(items.*) AS items_count')
+    .group('merchants.id')
+    .order('items_count DESC')
+    limit(1)
   end
 end
