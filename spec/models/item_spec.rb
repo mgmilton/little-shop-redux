@@ -40,7 +40,7 @@ describe Item do
         visit('/items/1')
 
         expect(item).to be_valid
-        expect(page).to have_content('data/images/default_item_img.jpg')
+        expect(page).to have_content('5.0 cents')
       end
 
       it "item entry cannot be valid without a name" do
