@@ -1,5 +1,5 @@
 class Item < ActiveRecord::Base
-  validates :name, :description, presence: true, uniqueness: true
+  validates :name, :description, presence: true
 
   validates_presence_of :price, :image
 

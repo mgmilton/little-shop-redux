@@ -26,7 +26,9 @@ merchants.each do |row|
                   updated_at: row[:updated_at])
 end
 
+
 category_id_cycle = Category.pluck(:id).cycle
+
 
 items.each do |row|
   Item.create(id:          row[:id],
@@ -38,4 +40,8 @@ items.each do |row|
               image:       "http://ask-angels.swellpress.netdna-cdn.com/wp-content/uploads/2014/10/healing-crystals-1024x292.jpg",
               created_at:  row[:created_at],
               updated_at:  row[:updated_at])
+end
+
+Merchant.all.each do |merchant|
+  merchant.update_attributes(:item_count => merchant.items.count)
 end
