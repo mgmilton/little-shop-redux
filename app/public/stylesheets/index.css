@@ -5,6 +5,13 @@ html {
 	color: #AAC4B4;
 }
 
-img {
-	border-radius: 8px;
+.box {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	flex-direction: column;
+	max-width: 500px;
+	border: 25px solid #F9CBC7;
+	padding: 25px;
+	margin: 0 auto;
 }
