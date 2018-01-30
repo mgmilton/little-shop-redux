@@ -20,7 +20,9 @@ describe Merchant do
 
         expect(merchant).to be_valid
       end
+    end
 
+    describe "Instance method" do
       it 'merchant has total price information for all items it has' do
         item1 = Item.create!(id: 1, name: "a thing", description: "does stuff", price: 200, image: 'thing', merchant_id: 1)
         item2 = Item.create!(id: 2, name: "the thing", description: "does more stuff", price: 250, image: 'thing', merchant_id: 1)
@@ -29,6 +31,17 @@ describe Merchant do
         merchant2 = Merchant.create!(name: "The dude", id: 2)
 
         expect(merchant.item_total_sum).to eq(450)
+      end
+    end
+
+    describe "Class method" do
+      it 'merchant with most items is returned correctly' do
+        item1 = Item.create!(id: 1, name: "a thing", description: "does stuff", price: 200, image: 'thing', merchant_id: 1)
+        item2 = Item.create!(id: 2, name: "the thing", description: "does more stuff", price: 250, image: 'thing', merchant_id: 1)
+        item3 = Item.create!(id: 3, name: "a whole new thing", description: "does all the stuff", price: 550, image: 'thing', merchant_id: 2)
+        merchant = Merchant.create!(name: "Good dude", id: 1)
+        merchant2 = Merchant.create!(name: "The dude", id: 2)
+
         expect(Merchant.most_items).to eq(merchant)
       end
     end

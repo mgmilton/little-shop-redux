@@ -4,12 +4,14 @@ describe "As a user" do
       visit('/items')
 
       expect(page).to have_content('All Items')
+      expect(page.status_code).to eq(200)
     end
 
     it "has a create item link" do
       visit('/items')
 
       expect(page).to have_content('Create an item')
+      expect(page.status_code).to eq(200)
     end
 
     it "has a link of items id" do
@@ -18,6 +20,7 @@ describe "As a user" do
       visit('/items')
 
       expect(page).to have_link('1')
+      expect(page.status_code).to eq(200)
     end
 
     it "has name of item" do
@@ -26,6 +29,7 @@ describe "As a user" do
       visit('/items')
 
       expect(page).to have_content('Thing 1')
+      expect(page.status_code).to eq(200)
     end
 
     it "has link to edit item" do
@@ -34,6 +38,7 @@ describe "As a user" do
       visit('/items')
 
       expect(page).to have_link('Edit')
+      expect(page.status_code).to eq(200)
     end
 
     it "when I click on the edit link it takes me to the items/:id/edit path" do
@@ -44,6 +49,7 @@ describe "As a user" do
       click_on('Edit')
 
       expect(current_path).to eq('/items/1/edit')
+      expect(page.status_code).to eq(200)
     end
 
     it "when I click on the delete link the merchant is gone" do
@@ -51,9 +57,10 @@ describe "As a user" do
 
       visit('/items')
 
-      click_on('delete')
+      click_on('Delete')
 
       expect(Item.count).to eq(0)
+      expect(page.status_code).to eq(200)
     end
   end
 end

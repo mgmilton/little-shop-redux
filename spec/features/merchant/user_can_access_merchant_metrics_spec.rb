@@ -10,6 +10,8 @@ describe "When user visits merchants-dashboard path" do
 
       visit '/merchants-dashboard'
 
+      expect(page).to have_link('Home')
+      expect(page).to have_link('Items')
       expect(page).to have_content('Merchant Metrics')
     end
 
@@ -30,7 +32,7 @@ describe "When user visits merchants-dashboard path" do
       expect(page).to have_content('Item 1')
       expect(page).to have_content('500.0')
     end
-  end
+
   it "they see merchant with most items information displayed" do
     Item.create!(id: 1, name: "Item 1", description: "a thing", merchant_id: 1, price: 500, image: 'image')
     Item.create!(id: 2, name: "Item 2", description: "another thing", merchant_id: 1, price: 500, image: 'image')
@@ -63,4 +65,5 @@ describe "When user visits merchants-dashboard path" do
     expect(page).to have_content('Item Count: 1')
     expect(page).to have_content('Sum Price Of All Items: 100.0')
   end
+ end
 end
