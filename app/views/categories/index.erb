@@ -19,6 +19,7 @@
   <% @categories.each do |category| %>
   <div class="box">
     <a href="/categories/<%= category.id %>"> <%= category.name %></a>
+    <img src="http://www.cell.com/pb-assets/marketing/picture%20show/2017/the-ocean/18.jpg">
     <a href="/categories/<%= category.id%>/edit">Edit</a>
     <form action="/categories/<%= category.id %>" method= "POST">
       <input type="hidden" name="_method" value="DELETE">
