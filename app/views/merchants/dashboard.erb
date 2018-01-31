@@ -25,7 +25,7 @@
     <ul>
     <% @high_item_merchant.each do |merchant| %>
       <ul>
-        <li>merchant.name</li>
+        <%= merchant.name.join(", ") %>
       </ul>
       <% end %>
     <li>Item Count: <%= @high_item_merchant.items.count %></li>

@@ -27,3 +27,8 @@ class Merchant < ActiveRecord::Base
     top_merchants # => test dis bish out
   end
 end
+
+  # def self.highest_item_merchants_name
+  #   most_item_merchants.each do |merchant|
+  #
+  # end
