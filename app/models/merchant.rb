@@ -13,4 +13,6 @@ class Merchant < ActiveRecord::Base
     .group('merchants.id')
     .order('items_count DESC').first
   end
+
+
 end
