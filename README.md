@@ -1,8 +1,5 @@
----
-layout: page
----
 
-# Avalaon's Altar
+# Avalon's Altar
 
 ## Information
 
