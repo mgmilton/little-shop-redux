@@ -24,11 +24,6 @@ class Merchant < ActiveRecord::Base
       break if merchant.items.count < highest_item_count
       top_merchants << merchant
     end
-    top_merchants # => test dis bish out
+    top_merchants
   end
 end
-
-  # def self.highest_item_merchants_name
-  #   most_item_merchants.each do |merchant|
-  #
-  # end
