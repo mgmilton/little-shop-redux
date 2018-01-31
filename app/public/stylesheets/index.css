@@ -39,3 +39,25 @@ html {
   background-color: #F9CBC7;
 	color: black;
 }
+
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+	max-width: 200px;
+	margin: 5% 0;
+	text-align: center;
+	background-color: #F4FDD9;
+	border-style: outset;
+	flex-direction: row;
+}
+
+.card:hover {
+    box-shadow: 0 16px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+.container {
+	    padding: 2px 16px;
+			display: flex;
+			justify-content: center;
+	}
