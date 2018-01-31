@@ -11,6 +11,11 @@ class Merchant < ActiveRecord::Base
     joins(:items).
     select('merchants.*, COUNT(items.*) AS items_count')
     .group('merchants.id')
-    .order('items_count DESC').first
+    .order('items_count DESC').first(2)
   end
+
+  def total_items
+    items.count
+  end
+
 end

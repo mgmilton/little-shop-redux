@@ -21,10 +21,13 @@
         <li><%= @item.name %></li>
         <li><%= @item.price %></li>
       </ul>
-    <p>Most Item Merchant</p>
+    <p>Most Item Merchants</p>
     <ul>
-    <%= @high_item_merchant.name %>
-    <li>Item Count: <%= @high_item_merchant.items.count %></li>
+
+    <% @high_item_merchant.each do |merchant| %>
+    <li> <%=merchant.name%> </li>
+    <li>Item Count: <%= merchant.total_items %></li>
+    <% end %>
   </ul>
     <div class="all_merchants_breakdown"
       <p>Merchant / Item Breakdown</p>

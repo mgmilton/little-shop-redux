@@ -42,7 +42,7 @@ describe Merchant do
         merchant = Merchant.create!(name: "Good dude", id: 1)
         merchant2 = Merchant.create!(name: "The dude", id: 2)
 
-        expect(Merchant.most_items).to eq(merchant)
+        expect(Merchant.most_items).to eq(merchant2)
       end
     end
   end

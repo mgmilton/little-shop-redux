@@ -108,7 +108,7 @@ class LittleShopApp < Sinatra::Base
   end
 
   get '/items' do
-    @items = Item.all
+    @items = Item.order(:name)
     erb :"items/index"
   end
 
