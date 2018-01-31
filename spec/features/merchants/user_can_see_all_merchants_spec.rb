@@ -30,7 +30,7 @@ describe "As a user" do
 
       visit '/merchants'
 
-      click_on '777'
+      click_on 'bobbyboes'
 
       expect(current_path).to eq('/merchants/777')
     end
