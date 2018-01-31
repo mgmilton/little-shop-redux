@@ -15,7 +15,7 @@ describe "As a user" do
 
       visit 'categories/44'
 
-      click_link 'Category Index'
+      click_link 'Categories'
 
       expect(current_path).to eq('/categories')
       expect(page.status_code).to eq(200)
