@@ -4,6 +4,14 @@ html {
 	font-family: "Poiret One";
 }
 
+.site_name {
+	text-decoration: none;
+	margin: 0;
+	padding: 45px;
+	padding-top: 15px;
+	display: flex;
+}
+
 h1 {
   color: #AAC4B4;
 }
@@ -74,4 +82,3 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
     display: block;
 	}
-
