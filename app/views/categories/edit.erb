@@ -7,6 +7,12 @@
   <link rel="stylesheet" href="/stylesheets/show.css">
   <link rel="shortcut icon" type="image/x-icon" href="/images/om-favicon.ico">
 </head>
+<section class="navbar">
+  <a href="/">Home</a>
+  <a href="/categories">Categories</a>
+  <a href="/items">Items</a>
+  <a href="/merchants">Merchants</a>
+</section>
   <form action="/categories/<%= @category.id %>" method="POST">
     <p>Edit</p>
     <input type="hidden" name="_method" value="PUT" />

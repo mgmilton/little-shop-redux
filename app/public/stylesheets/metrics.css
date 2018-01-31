@@ -4,7 +4,35 @@ html {
 	font-family: "Poiret One";
 }
 
-div {
+body {
+	background: #fff url( "/images/purple_stone1.jpg") no-repeat center center fixed;
+}
+
+section.navbar {
+  overflow: hidden;
+  background-color: #878B90;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+section.navbar a {
+  float: left;
+  display: block;
+  color: #AAC4B4;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+	transition-duration: 2.5s;
+}
+
+section.navbar a:hover {
+  background-color: #F9CBC7;
+	color: black;
+}
+
+div.infinity {
     width: 300px;
     height: 100px;
     position: relative;
@@ -12,10 +40,6 @@ div {
     animation-name: example;
     animation-duration: 5s;
     animation-timing-function: ease-in-out;
-}
-
-body {
-	background: #fff url( "/images/purple_stone1.jpg") no-repeat center center fixed;
 }
 
 @keyframes example {
