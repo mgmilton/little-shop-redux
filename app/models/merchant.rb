@@ -7,10 +7,23 @@ class Merchant < ActiveRecord::Base
     self.items.sum(:price)
   end
 
-  def self.most_items
+  def self.merchants_grouped_by_highest_item_count
     joins(:items).
     select('merchants.*, COUNT(items.*) AS items_count')
     .group('merchants.id')
-    .order('items_count DESC').first
+    .order('items_count DESC')
+  end
+
+  def self.highest_item_count
+    merchants_grouped_by_highest_item_count.first.items.count
+  end
+
+  def self.most_item_merchants
+    top_merchants = []
+    merchants_grouped_by_highest_item_count.each do |merchant|
+      break if merchant.items.count < highest_item_count
+      top_merchants << merchant
+    end
+    top_merchants # => test dis bish out
   end
 end

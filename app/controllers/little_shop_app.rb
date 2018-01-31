@@ -36,7 +36,8 @@ class LittleShopApp < Sinatra::Base
 
   get '/merchants-dashboard' do
     @merchants = Merchant.all
-    @high_item_merchant = Merchant.most_items
+    @high_item_merchant = Merchant.most_item_merchants
+    require "pry"; binding.pry
     @golden_merchant = Item.highest_item.merchant
     @item = Item.highest_item
     erb :"/merchants/dashboard"
