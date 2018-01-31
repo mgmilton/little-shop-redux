@@ -6,6 +6,7 @@ gem 'activerecord'
 gem 'sinatra-activerecord'
 gem 'pry'
 
+
 group :development, :test do
   gem 'shotgun'
   gem 'rspec'

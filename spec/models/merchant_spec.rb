@@ -42,6 +42,7 @@ describe Merchant do
         merchant = Merchant.create!(name: "Good dude", id: 1)
         merchant2 = Merchant.create!(name: "The dude", id: 2)
 
+<<<<<<< HEAD
         expect(Merchant.most_item_merchants).to eq([merchant])
       end
 
@@ -55,6 +56,9 @@ describe Merchant do
         merchant3 = Merchant.create!(name: "I sell nada", id: 3)
 
         expect(Merchant.most_item_merchants).to eq([merchant, merchant2])
+=======
+        expect(Merchant.most_items).to eq(merchant2)
+>>>>>>> c3214195670c39f636c4aa7e8403cb35297682fe
       end
     end
   end

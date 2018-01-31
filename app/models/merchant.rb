@@ -26,4 +26,9 @@ class Merchant < ActiveRecord::Base
     end
     top_merchants
   end
+
+  def total_items
+    items.count
+  end
+
 end
