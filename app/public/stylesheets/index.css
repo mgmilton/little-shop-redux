@@ -17,12 +17,10 @@ body {
 
 .merch_id_link a {
 	text-decoration: none;
-	position: fixed;
 }
 
 .title_on_page_background {
 		background-color: #F0A868;
-		opacity: .96;
 }
 
 .title_on_page h1 {
