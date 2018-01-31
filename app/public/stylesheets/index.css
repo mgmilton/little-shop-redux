@@ -5,6 +5,10 @@ html {
 	color: #AAC4B4;
 }
 
+.merch_id_link a {
+	text-decoration: none;
+}
+
 .box {
 	display: flex;
 	justify-content: space-between;
@@ -14,4 +18,53 @@ html {
 	border: 25px solid #F9CBC7;
 	padding: 25px;
 	margin: 0 auto;
+}
+
+.navbar {
+	display: flex;
+	height: 45px;
+	flex-direction: row;
+  background-color: #878B90;
+  position: absolute;
+  width: 100%;
+}
+
+.navbar a {
+  display: block;
+  color: #AAC4B4;
+  text-decoration: none;
+  font-size: 17px;
+	transition-duration: 2.5s;
+	margin-left: 7px;
+	margin-right: 5px;
+}
+
+.navbar a:hover {
+  background-color: #F9CBC7;
+	color: black;
+}
+
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+	max-width: 200px;
+	margin: 50px;
+	text-align: center;
+	background-color: #F4FDD9;
+	border-style: outset;
+}
+
+.card:hover {
+    box-shadow: 0 16px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+.container {
+	    padding: 2px 16px;
+			display: inline-block;
+			justify-content: center;
+	}
+
+.container p {
+	font-weight: bolder;
 }

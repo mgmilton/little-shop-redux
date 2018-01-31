@@ -3,21 +3,31 @@
   <head>
     <meta charset="utf-8">
     <title>Avalon&#39;s Altar</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poiret+One">
     <link rel="stylesheet" href="/stylesheets/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poiret+One">
     <link rel="shortcut icon" type="image/x-icon" href="/images/om-favicon.ico">
   </head>
+  <nav class="navbar">
+    <h1><a href="/">Home</a></h1>
+    <h1><a href="/merchants">All Merchants</a></h1>
+    <h1><a href="/items">All Items</a></h1>
+    <h1><a href="/categories">Categories</a></h1>
+  </nav>
   <h1>All Merchants</h1>
   <a href="/merchants/new">Create a merchant</a>
   <% @merchants.each do |merchant| %>
-  <div class="merchant<%= merchant.id %>">
-    <p class="merch_id_link"><a href="/merchants/<%= merchant.id %>"><%= merchant.id %></a></p>
-    <p><%= merchant.name %></p>
-    <a href="/merchants/<%= merchant.id  %>/edit">Edit</a>
-    <form action="/merchants/<%= merchant.id %>" method="POST">
-      <input type="hidden" name="_method" value="DELETE">
-      <input type="submit" value="delete" class="delete_button"/>
-    </form>
+  <div class="card">
+    <div class="container">
+        <p class="merch_id_link"><a href="/merchants/<%= merchant.id %>"><%= merchant.name %></p>
+        <div class="merchant<%= merchant.id %>">
+        <a href="/merchants/<%= merchant.id  %>/edit">Edit</a>
+        <form action="/merchants/<%= merchant.id %>" method="POST">
+          <input type="hidden" name="_method" value="DELETE">
+          <input type="submit" value="delete" class="delete_button"/>
+        </form>
+      </div>
+    </div>
   </div>
+</div>
   <% end %>
 </html>

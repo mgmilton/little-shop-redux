@@ -7,8 +7,13 @@
     <link rel="stylesheet" href="/stylesheets/show.css">
     <link rel="shortcut icon" type="image/x-icon" href="/images/om-favicon.ico">
   </head>
+  <nav class="navbar">
+    <h1><a href="/">Home</a></h1>
+    <h1><a href="/merchants">All Merchants</a></h1>
+    <h1><a href="/items">All Items</a></h1>
+    <h1><a href="/categories">Categories</a></h1>
+  </nav>
   <body>
-    <a href="/merchants" id="merchant_index">Merchant Index</a>
     <h1><%= @merchant.name %></h1>
     <p><%= @merchant.id %></p>
   </body>

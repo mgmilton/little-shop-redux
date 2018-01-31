@@ -6,7 +6,7 @@ describe "As a user" do
 
       visit 'merchants/2'
 
-      expect(page).to have_link('Merchant Index')
+      expect(page).to have_link('All Merchants')
       expect(page).to have_text("Georginas Nails")
       expect(page).to have_text("2")
     end
@@ -16,7 +16,7 @@ describe "As a user" do
 
       visit 'merchants/2'
 
-      click_link 'merchant_index'
+      click_link 'All Merchants'
 
       expect(current_path).to eq('/merchants')
     end
