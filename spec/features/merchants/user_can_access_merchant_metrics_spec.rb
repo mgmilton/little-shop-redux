@@ -36,16 +36,18 @@ describe "When user visits merchants-dashboard path" do
   it "they see merchant with most items information displayed" do
     Item.create!(id: 1, name: "Item 1", description: "a thing", merchant_id: 1, price: 500, image: 'image')
     Item.create!(id: 2, name: "Item 2", description: "another thing", merchant_id: 1, price: 500, image: 'image')
-    Item.create!(id: 3, name: "Item 3", description: "stuff", merchant_id: 1, price: 200, image: 'image')
+    Item.create!(id: 3, name: "Item 3", description: "stuff", merchant_id: 2, price: 200, image: 'image')
     Item.create!(id: 4, name: "Item 4", description: "more stuff", merchant_id: 2, price: 100, image: 'image')
     Merchant.create!(id: 1, name: "Merch_1")
     Merchant.create!(id: 2, name: "Merch_2")
+    Merchant.create!(id: 3, name: "Merch_3")
 
     visit '/merchants-dashboard'
-
+    
     expect(page).to have_content('Most Item Merchant')
     expect(page).to have_content('Merch_1')
-    expect(page).to have_content('Item Count: 3')
+    expect(page).to have_content('Merch_2')
+    expect(page).to have_content('Item Count: 2')
   end
 
   it "they see merchant/item breakdown" do
