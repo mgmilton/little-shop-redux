@@ -7,10 +7,15 @@ This is a healing store. Find all your amethyst, fluorite, carnelian, rose quart
 
 ## Launch
 
+To launch the store, clone down this directory and run the following commands:
+
 ```
-git clone <little-shop-redux>
 bundle
 rake db:migrate
 rake db:seed
 shotgun
 ```
+
+## Contributors
+[a link] (https://github.com/mgmilton)
+[a link] (https://github.com/freshouttheovenprogrammes)
