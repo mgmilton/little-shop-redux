@@ -12,3 +12,5 @@ ActiveRecord::Base.establish_connection(
   :database => "#{database_name}",
   :encoding => 'utf8'
 )
+
+ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || "postgres://localhost/#{database_name}")
