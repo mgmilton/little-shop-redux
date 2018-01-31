@@ -6,7 +6,9 @@ describe "As a user" do
 
       visit 'merchants/2'
 
-      expect(page).to have_text("Merchant Index")
+      expect(page).to have_link('Merchant Index')
+      expect(page).to have_text("Georginas Nails")
+      expect(page).to have_text("2")
     end
 
     it "When I click on merchant index link I go to merchants page" do

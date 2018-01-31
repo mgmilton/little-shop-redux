@@ -14,7 +14,7 @@ describe "As a user" do
 
         visit 'items/44'
 
-        click_link 'Items Index'
+        click_link 'Items'
 
         expect(current_path).to eq('/items')
         expect(page.status_code).to eq(200)

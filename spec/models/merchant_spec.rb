@@ -42,7 +42,19 @@ describe Merchant do
         merchant = Merchant.create!(name: "Good dude", id: 1)
         merchant2 = Merchant.create!(name: "The dude", id: 2)
 
-        expect(Merchant.most_items).to eq(merchant)
+        expect(Merchant.most_item_merchants).to eq([merchant])
+      end
+
+      it 'merchants tied with most items are returned correctly' do
+        item1 = Item.create!(id: 1, name: "a thing", description: "does stuff", price: 200, image: 'thing', merchant_id: 1)
+        item2 = Item.create!(id: 2, name: "the thing", description: "does more stuff", price: 250, image: 'thing', merchant_id: 1)
+        item3 = Item.create!(id: 3, name: "a whole new thing", description: "does all the stuff", price: 550, image: 'thing', merchant_id: 2)
+        item4 = Item.create!(id: 4, name: "wow", description: "yeah!", price: 550, image: 'thing', merchant_id: 2)
+        merchant = Merchant.create!(name: "Good dude", id: 1)
+        merchant2 = Merchant.create!(name: "The dude", id: 2)
+        merchant3 = Merchant.create!(name: "I sell nada", id: 3)
+
+        expect(Merchant.most_item_merchants).to eq([merchant, merchant2])
       end
     end
   end

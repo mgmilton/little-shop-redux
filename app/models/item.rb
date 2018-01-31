@@ -1,7 +1,5 @@
 class Item < ActiveRecord::Base
-  validates :name, :description, presence: true, uniqueness: true
-
-  validates_presence_of :price, :image
+  validates_presence_of :name, :description, :price, :image
 
   belongs_to :merchant
   belongs_to :categories
@@ -12,9 +10,5 @@ class Item < ActiveRecord::Base
 
   def self.highest_item
     order(price: :desc).first
-  end
-
-  def self.slice_by_name(letter)
-    where("name like ?", "#{letter}%")
   end
 end

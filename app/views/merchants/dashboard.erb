@@ -8,12 +8,10 @@
     <link rel="shortcut icon" type="image/x-icon" href="/images/om-favicon.ico">
   </head>
   <nav class="navbar">
-    <!-- <div class="merch-dashboard-nav"> -->
       <h1><a href="/">Home</a></h1>
       <h1><a href="/merchants">All Merchants</a></h1>
       <h1><a href="/items">All Items</a></h1>
       <h1><a href="/categories">Categories</a></h1>
-    <!-- </div> -->
   </nav>
   <h1>Merchant Metrics</h1>
     <p>Golden Merchant</p>
@@ -23,21 +21,24 @@
         <li><%= @item.name %></li>
         <li><%= @item.price %></li>
       </ul>
-    <p>Most Item Merchant</p>
+    <p>Most Item Merchants</p>
     <ul>
-    <%= @high_item_merchant.name %>
-    <li>Item Count: <%= @high_item_merchant.items.count %></li>
+
+    <% @high_item_merchant.each do |merchant| %>
+    <li> <%=merchant.name%> </li>
+    <li>Item Count: <%= merchant.total_items %></li>
+    <br/>
+    <% end %>
   </ul>
     <div class="all_merchants_breakdown"
       <p>Merchant / Item Breakdown</p>
         <% @merchants.each do |merchant| %>
         <ul>
           <li>Merchant Name: <%= merchant.name %></li>
-          <li>Item Count: <%= merchant.item_count %></li>
+          <li>Item Count: <%= merchant.items.count%></li>
           <li>Sum Price Of All Items: <%= merchant.item_total_sum %></li>
         </ul>
         <% end %>
-        _______________________________________
     </div>
   <ul>
   </ul>
