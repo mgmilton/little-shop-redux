@@ -20,4 +20,4 @@ Then visit localhost:9393 in your browser! Shop around and remember:
 "During deep meditation it is possible to dispel time, to see simultaneously all the past, present, and future, and then everything is good, everything is perfect, everything is Brahman. Therefore, it seems to me that everything that exists is good--death as well as life, sin as well as holiness, wisdom as well as folly. Everything is necessary, everything needs only my agreement, my assent, my loving understanding; then all is well with me and nothing can harm me."  - Hermann Hesse
 
 ## Contributors
-Made by [a link](https://github.com/mgmilton/) and [a link](https://github.com/freshouttheovenprogrammes)
+Made by [Matt Milton](https://github.com/mgmilton/) and [Zac Palmquist](https://github.com/freshouttheovenprogrammes)
