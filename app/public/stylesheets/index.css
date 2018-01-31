@@ -5,6 +5,9 @@ html {
 	color: #AAC4B4;
 }
 
+.merch_id_link a {
+	text-decoration: none;
+}
 
 .box {
 	display: flex;
