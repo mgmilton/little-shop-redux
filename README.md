@@ -8,7 +8,7 @@ layout: page
 
 This is a healing store. Find all your amethyst, fluorite, carnelian, rose quarts, and namaste bumper stickers here at Avalon's Altar. Built with om's, Sinatra, Capybara, Puma, and Postgres.
 
-##Launch
+## Launch
 
 ```
 git clone <little-shop-redux>
