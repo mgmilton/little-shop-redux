@@ -15,7 +15,7 @@ class Merchant < ActiveRecord::Base
   end
 
   def self.highest_item_count
-    merchants_grouped_by_highest_item_count.first.items.count
+    merchants_grouped_by_highest_item_count.first.total_items
   end
 
   def self.most_item_merchants
