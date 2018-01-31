@@ -9,7 +9,7 @@ body {
 	background: #fff url( "/images/purple_stone1.jpg") no-repeat center center fixed;
 }
 
-.navbar {
+nav {
   overflow: hidden;
   background-color: #878B90;
   position: fixed;
