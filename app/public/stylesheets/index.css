@@ -20,7 +20,9 @@ body {
 }
 
 .title_on_page_background {
-		background-color: #F0A868;
+	background-color: #F0A868;
+	color: #87a593;
+	opacity: .96;
 }
 
 .title_on_page h1 {
@@ -28,17 +30,6 @@ body {
 	justify-content: center;
 	font-weight: bold;
 	font-size: 50px;
-}
-
-.box {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	flex-direction: column;
-	max-width: 500px;
-	border: 25px solid #F9CBC7;
-	padding: 25px;
-	margin: 0 auto;
 }
 
 .navbar {
@@ -61,12 +52,12 @@ body {
 }
 
 .navbar a {
-	    display: block;
-	    color: #AAC4B4;
-	    text-decoration: none;
-	    font-size: 17px;
-	    transition-duration: 2.5s;
-	    padding: 9px 5px 8px 7px;
+  display: block;
+  color: #AAC4B4;
+  text-decoration: none;
+  font-size: 17px;
+  transition-duration: 2.5s;
+  padding: 9px 5px 8px 7px;
 }
 
 .navbar a:hover {

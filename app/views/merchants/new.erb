@@ -6,23 +6,25 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poiret+One">
     <link rel="stylesheet" href="/stylesheets/main.css">
     <link rel="shortcut icon" type="image/x-icon" href="/images/om-favicon.ico">
+  <body>
   </head>
   <nav class="navbar">
-    <h1><a href="/">Home</a></h1>
-    <h1><a href="/merchants">All Merchants</a></h1>
-    <h1><a href="/items">All Items</a></h1>
-    <h1><a href="/categories">Categories</a></h1>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/merchants">All Merchants</a></li>
+      <li><a href="/items">All Items</a></li>
+      <li><a href="/categories">Categories</a></li>
+    </ul>
   </nav>
-  <body>
-    <form action="/merchants" method="post">
-      <p>Enter a new merchant:</p>
-      <div class="merchant_input_field">
-        <div class="merchant_name_box">
-          <div class="merchant_name_input_box">
-            <input type='text' name='merchant[name]' placeholder="Merchant Name"/><br/>
-          </div>
+  <form action="/merchants" method="post">
+    <p>Enter a new merchant:</p>
+    <div class="merchant_input_field">
+      <div class="merchant_name_box">
+        <div class="merchant_name_input_box">
+          <input type='text' name='merchant[name]' placeholder="Merchant Name"/><br/>
         </div>
-        <input type='submit' id="submit"/>
-      </form>
+      </div>
+      <input type='submit' id="submit"/>
+    </form>
   </body>
 </html>
