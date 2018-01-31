@@ -7,13 +7,21 @@
     <link rel="stylesheet" href="stylesheets/metrics.css">
     <link rel="shortcut icon" type="image/x-icon" href="/images/om-favicon.ico">
   </head>
+  <section class="navbar">
+    <a href="/">Home</a>
+    <a href="/categories">Categories</a>
+    <a href="/items">Items</a>
+    <a href="/merchants">Merchants</a>
+  </section>
   <h1>Category Metrics</h1>
-    <p>Average Item price for <%= @categories[0].name%>: $<%= @itemscategory1.average_price_per_item %></p>
-    <p>Average Item price for <%= @categories[1].name%>: $ <%= @itemscategory2.average_price_per_item %></p>
-    <p>Average Item price for <%= @categories[2].name%>: $ <%= @itemscategory3.average_price_per_item%></p>
-    <p>Average Item price for <%= @categories[3].name%>: $ <%= @itemscategory4.average_price_per_item%></p>
-    <p>Average Item price for <%= @categories[4].name%>: $ <%= @itemscategory5.average_price_per_item%></p>
-    <p>Category with Most Expensive Item: <%= @categories[@most_expensive_id - 1].name %></p>
-    <p>Category with Least Expensive Item: <%= @categories[@least_expensive_id - 1].name %></p>
-
+    <ul>
+      <li>Average Item price for <%= @categories[0].name%>: $<%= @itemscategory1.average_price_per_item %></li>
+      <li>Average Item price for <%= @categories[1].name%>: $ <%= @itemscategory2.average_price_per_item %></li>
+      <li>Average Item price for <%= @categories[2].name%>: $ <%= @itemscategory3.average_price_per_item%></li>
+      <li>Average Item price for <%= @categories[3].name%>: $ <%= @itemscategory4.average_price_per_item%></li>
+      <li>Average Item price for <%= @categories[4].name%>: $ <%= @itemscategory5.average_price_per_item%></li>
+      <li>Category with Most Expensive Item: <%= @categories[@most_expensive_id - 1].name %></li>
+      <li>Category with Least Expensive Item: <%= @categories[@least_expensive_id - 1].name %></li>
+    </ul>
+  <div id="infinity"/>
 </html>
