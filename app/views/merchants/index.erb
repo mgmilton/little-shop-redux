@@ -3,10 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>Avalon&#39;s Altar</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poiret+One">
     <link rel="stylesheet" href="/stylesheets/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poiret+One">
     <link rel="shortcut icon" type="image/x-icon" href="/images/om-favicon.ico">
   </head>
+  <nav class="navbar">
+    <h1><a href="/">Home</a></h1>
+    <h1><a href="/merchants">All Merchants</a></h1>
+    <h1><a href="/items">All Items</a></h1>
+    <h1><a href="/categories">Categories</a></h1>
+  </nav>
   <h1>All Merchants</h1>
   <a href="/merchants/new">Create a merchant</a>
   <% @merchants.each do |merchant| %>
