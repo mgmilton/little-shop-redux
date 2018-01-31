@@ -5,8 +5,25 @@ html, body {
 	color: #AAC4B4;
 }
 
+img.resize {
+  max-width:50%;
+  max-height:50%;
+}
+
+body {
+	background: #f4fdd933 url( "/images/mandala_background.png") no-repeat center center fixed;
+	background-size: 50%;
+}
+
 .merch_id_link a {
 	text-decoration: none;
+}
+
+.title_on_page h1 {
+	display: flex;
+	justify-content: center;
+	font-weight: bold;
+	font-size: 50px;
 }
 
 .box {
