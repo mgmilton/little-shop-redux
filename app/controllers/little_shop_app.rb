@@ -151,4 +151,8 @@ class LittleShopApp < Sinatra::Base
     item.destroy
     redirect '/items'
   end
+
+  get '/g_dashboard' do
+    erb :"/g_dashboard"
+  end
 end
