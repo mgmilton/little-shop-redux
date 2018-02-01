@@ -34,12 +34,12 @@ ul {
 }
 
 .navbar a {
-	    display: block;
-	    color: #AAC4B4;
-	    text-decoration: none;
-	    font-size: 17px;
-	    transition-duration: 2.5s;
-	    padding: 9px 5px 8px 7px;
+    display: block;
+    color: #AAC4B4;
+    text-decoration: none;
+    font-size: 17px;
+    transition-duration: 2.5s;
+    padding: 9px 5px 8px 7px;
 }
 
 .navbar a:hover {

@@ -15,11 +15,7 @@ body {
 	background-size: 50%;
 }
 
-.fixed_nav_merchant_index {
-
-}
-
-.create_merch_button {
+.create_merch_button, .create_item_button {
 	margin-left: 50px;
 	position: fixed;
 	top: 120px;
@@ -93,8 +89,22 @@ body {
 	padding-bottom: 20px;
 }
 
+.itemimage {
+	width: 100%;
+  height: 100px;
+}
+
 .card:hover {
-    box-shadow: 0 16px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 16px 16px 0 rgba(0,0,0,0.2)
+}
+
+.container_items {
+	padding: 2px 16px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding-top: 50px;
+	width: 33%;
 }
 
 
