@@ -7,17 +7,27 @@
     <link rel="stylesheet" href="/stylesheets/show.css">
     <link rel="shortcut icon" type="image/x-icon" href="/images/om-favicon.ico">
   </head>
-  <section class="navbar">
-    <a href="/">Home</a>
-    <a href="/categories">Categories</a>
-    <a href="/items">Items</a>
-    <a href="/merchants">Merchants</a>
-  </section>
   <body>
-    <h1>item</h1>
+    <div class="fixed_nav_merchant_index">
+      <section class="navbar">
+        <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/merchants">All Merchants</a></li>
+    <li><a href="/items">All Items</a></li>
+    <li><a href="/categories">Categories</a></li>
+  </ul>
+  </section>
+  </div>
+  <div class="title_on_page_background">
+    <section class="title_on_page">
+      <h1>Item Information</h1>
+    </section>
+  </div>
+  <div class="item_id_container">
     <p> <%= @item.name %> </p>
     <p><%= @item.id %></p>
     <p><%= @item.description %></p>
     <p><%= @item.price %> cents</p>
-  </body>
+  </div>
+</body>
 </html>

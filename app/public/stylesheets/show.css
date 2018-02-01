@@ -50,6 +50,24 @@ ul {
 	color: black;
 }
 
+.container_items {
+	padding: 2px 16px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding-top: 50px;
+	width: 33%;
+}
+
+
+.item_id_container {
+    margin-top: 100px;
+}
+
+.container p {
+	font-weight: bolder;
+}
+
 .title_on_page_background, .merchant_info_on_page_background {
 	background-color: #F0A868;
   color: #87a593;
