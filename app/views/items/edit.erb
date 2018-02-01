@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>Avalon&#39;s Altar</title>
@@ -16,12 +16,20 @@
   <body>
   <form action="/items/<%= @item.id %>" method="POST">
     <p>Edit</p>
+    <div class="input_params">
     <input type="hidden" name="_method" value="PUT" />
-    <input type='text' name='item[name]' value="Name"/><br/>
-    <input type='text' name='item[description]' value="Description"</><br/>
-    <input type='decimal' name='item[price]' value="Price"/><br/>
-    <input type='text' name='item[image]' value="Image URL"/><br/>
-    <input type='submit'/>
+    <a>Edit Name</a>
+    <input type='text' name='item[name]' value="<%= @item.name %>"/><br/>
+    <a>Edit Description</a>
+    <input type='text' name='item[description]' value="<%= @item.description %>"</><br/>
+    <a>Edit Price</a>
+    <input type='decimal' name='item[price]' value="<%= @item.price %>"/><br/>
+    <a>Img URL</a>
+    <input type='text' name='item[image]' value="<%= @item.image %>"/><br/>
+    <div class="submit_box">
+      <input type='submit'/>
+    </div>
+  </div>
   </form>
 </body>
 </html>

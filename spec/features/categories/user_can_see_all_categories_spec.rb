@@ -1,10 +1,10 @@
 describe "As a user" do
   context "when I visit categories path" do
-    it "I can see and click new category link and go to new category page from link" do
+    it "I can see and click new category button and go to new category page from button" do
       visit '/categories'
 
+      save_and_open_page
       click_button("Create A Category")
-
       expect(current_path).to eq('/categories/new')
     end
 

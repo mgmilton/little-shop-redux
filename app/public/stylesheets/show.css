@@ -88,3 +88,18 @@ ul {
 .merch_name {
 	margin-top: 50px;
 }
+
+.input_params {
+	width: 50px;
+	padding: 5px;
+}
+
+.input_params input {
+	width: 500px;
+	height: 30px;
+}
+
+.input_params a {
+	display: flex;
+	flex-grow:
+}
