@@ -7,51 +7,43 @@
     <link rel="stylesheet" href="stylesheets/show.css">
     <link rel="shortcut icon" type="image/x-icon" href="/images/om-favicon.ico">
   </head>
-  <body>
-    <div class="fixed_nav_merchant_index">
-      <nav class="navbar">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/merchants">All Merchants</a></li>
-          <li><a href="/items">All Items</a></li>
-          <li><a href="/categories">Categories</a></li>
-        </ul>
-      </nav>
-      <div class="title_on_page_background">
-        <section class="title_on_page">
-          <h1>Merchant Metrics</h1>
-        </section>
-      </div>
-    </div>
-    <section class="container">
+  <nav class="navbar">
+      <h1><a href="/">Home</a></h1>
+      <h1><a href="/merchants">All Merchants</a></h1>
+      <h1><a href="/items">All Items</a></h1>
+      <h1><a href="/categories">Categories</a></h1>
+  </nav>
+  <h1>Merchant Metrics</h1>
     <p>Golden Merchant</p>
-    <article class="card">
       <ul>
         <li><%= @golden_merchant.name %></li>
         <li><%= @golden_merchant.id %></li>
         <li><%= @item.name %></li>
         <li><%= @item.price %></li>
       </ul>
-    </article>
+      <div class="all_merchants_breakdown"
     <p>Most Item Merchants</p>
     <ul>
+
     <% @high_item_merchant.each do |merchant| %>
-    <article class="card">
     <li> <%=merchant.name%> </li>
     <li>Item Count: <%= merchant.total_items %></li>
     <br/>
     <% end %>
+  </div>
   </ul>
-  </article>
+    <div class="all_merchants_breakdown"
       <p>Merchant / Item Breakdown</p>
         <% @merchants.each do |merchant| %>
-        <article class="card">
-        <ul>
+        <div class="each_merchant">
+
+        </div>
+        <ol>
           <li>Merchant Name: <%= merchant.name %></li>
           <li>Item Count: <%= merchant.items.count%></li>
           <li>Sum Price Of All Items: <%= merchant.item_total_sum %></li>
+        </ol>
         <% end %>
-      </ul>
-  </section>
-  </body>
+      </div>
+    </div>
 </html>

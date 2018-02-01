@@ -11,7 +11,14 @@ body {
 
 ul {
 	display: flex;
+}
 
+li {
+	list-style-type: none;
+}
+
+.merchant_dash {
+	padding-top: 45px;
 }
 
 .navbar {
@@ -107,4 +114,28 @@ input[type="submit"] {
 .input_params a {
 	display: flex;
 	flex-grow:
+}
+
+.container {
+  padding: 2px 16px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+	padding-top: 50px;
+}
+
+.all_merchants_breakdown {
+	background-color: #6d9c79;
+	width: 28%;
+	opacity: .9;
+}
+
+.all_merchants_breakdown ol {
+	margin: 0 0 0 20px;
+	padding: 5px;
+	color: #F0A868;
+}
+
+.all_merchants_breakdown p {
+	color: #F0A868;
 }
