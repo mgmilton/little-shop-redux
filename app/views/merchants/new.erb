@@ -16,15 +16,17 @@
       <li><a href="/categories">Categories</a></li>
     </ul>
   </nav>
-  <form action="/merchants" method="post">
-    <p>Enter a new merchant:</p>
-    <div class="merchant_input_field">
-      <div class="merchant_name_box">
-        <div class="merchant_name_input_box">
-          <input type='text' name='merchant[name]' placeholder="Merchant Name"/><br/>
+  <aside class="new_merch_submit">
+    <form action="/merchants" method="post">
+      <p>Enter a new merchant</p>
+      <div class="merchant_input_field">
+        <div class="merchant_name_box">
+          <div class="merchant_name_input_box">
+            <input type='text' name='merchant[name]' placeholder="Merchant Name"/><br/>
+          </div>
         </div>
-      </div>
-      <input type='submit' id="submit"/>
-    </form>
+        <input type='submit' id="submit"/>
+      </form>
+  </aside>
   </body>
 </html>

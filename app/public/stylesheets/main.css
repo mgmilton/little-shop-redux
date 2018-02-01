@@ -116,3 +116,12 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
     display: block;
 	}
+
+	.new_merch_submit {
+		padding: 25px;
+	}
+
+	.new_merch_submit p {
+		font-weight: bold;
+		font-size: 35px;
+	}
