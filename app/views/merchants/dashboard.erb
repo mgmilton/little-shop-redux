@@ -15,19 +15,15 @@
   </nav>
   <h1>Merchant Metrics</h1>
     <p>Golden Merchant</p>
-      <ul>
-        <li><%= @golden_merchant.name %></li>
-        <li><%= @golden_merchant.id %></li>
-        <li><%= @item.name %></li>
-        <li><%= @item.price %></li>
-      </ul>
+        <p><%= @golden_merchant.name %></p>
+        <p><%= @golden_merchant.id %></p>
+        <p><%= @item.name %></p>
+        <p><%= @item.price %></p>
       <div class="all_merchants_breakdown"
     <p>Most Item Merchants</p>
-    <ul>
-
     <% @high_item_merchant.each do |merchant| %>
-    <li> <%=merchant.name%> </li>
-    <li>Item Count: <%= merchant.total_items %></li>
+    <p><%=merchant.name%></p>
+    <p>Item Count: <%= merchant.total_items %></p>
     <br/>
     <% end %>
   </div>
@@ -38,11 +34,11 @@
         <div class="each_merchant">
 
         </div>
-        <ol>
-          <li>Merchant Name: <%= merchant.name %></li>
-          <li>Item Count: <%= merchant.items.count%></li>
-          <li>Sum Price Of All Items: <%= merchant.item_total_sum %></li>
-        </ol>
+        <ul>
+          <p>Merchant Name: <%= merchant.name %></p>
+          <p>Item Count: <%= merchant.items.count%></p>
+          <p>Sum Price Of All Items: <%= merchant.item_total_sum %></p>
+        </ul>
         <% end %>
       </div>
     </div>
