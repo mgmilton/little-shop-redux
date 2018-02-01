@@ -90,13 +90,18 @@ ul {
 }
 
 .input_params {
-	width: 50px;
+	width: 100px;
 	padding: 5px;
 }
 
-.input_params input {
+.input_params, input {
 	width: 500px;
 	height: 30px;
+}
+
+input[type="submit"] {
+  font-family: Arial, sans-serif;
+	width: 50px;	
 }
 
 .input_params a {
