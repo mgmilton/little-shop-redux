@@ -7,12 +7,15 @@
   <link rel="stylesheet" href="/stylesheets/show.css">
   <link rel="shortcut icon" type="image/x-icon" href="/images/om-favicon.ico">
 </head>
-  <h1><%= @category.name %></h1>
-  <p><%= @category.id %></p>
   <nav class="navbar">
-    <a href="/">Home</a>
-    <a href="/categories">Categories</a>
-    <a href="/items">Items</a>
-    <a href="/merchants">Merchants</a>
-  </div>
+      <h1><a href="/">Home</a></h1>
+      <h1><a href="/categories">Categories</a></h1>
+      <h1><a href="/items">Items</a></h1>
+      <h1><a href="/merchants">Merchants</a></h1>
+  </nav>
+  <body>
+      <h2>category </h2>
+      <p><%= @category.name %></p>
+      <p><%= @category.id %></p>
+  </body>
 </html>
