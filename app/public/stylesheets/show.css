@@ -9,23 +9,37 @@ body {
 	background: #fff url( "/images/purple_stone1.jpg") no-repeat center center fixed;
 }
 
+ul {
+	display: flex;
+
+}
+
 .navbar {
 	display: flex;
 	height: 45px;
 	flex-direction: row;
   background-color: #878B90;
-  position: absolute;
   width: 100%;
 }
 
+.navbar li {
+	list-style-type: none;
+	display: inline-block;
+	padding-top: 4px;
+}
+
+.navbar ul {
+	margin: 0 0 0 20px;
+	padding: 0
+}
+
 .navbar a {
-  display: block;
-  color: #AAC4B4;
-  text-decoration: none;
-  font-size: 17px;
-	transition-duration: 2.5s;
-	margin-left: 7px;
-	margin-right: 5px;
+	    display: block;
+	    color: #AAC4B4;
+	    text-decoration: none;
+	    font-size: 17px;
+	    transition-duration: 2.5s;
+	    padding: 9px 5px 8px 7px;
 }
 
 .navbar a:hover {
