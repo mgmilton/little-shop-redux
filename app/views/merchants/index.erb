@@ -7,15 +7,20 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poiret+One">
     <link rel="shortcut icon" type="image/x-icon" href="/images/om-favicon.ico">
   </head>
+  <body>
   <nav class="navbar">
     <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/merchants">All Merchants</a></li>
-    <li><a href="/items">All Items</a></li>
-    <li><a href="/categories">Categories</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/merchants">All Merchants</a></li>
+      <li><a href="/items">All Items</a></li>
+      <li><a href="/categories">Categories</a></li>
   </ul>
   </nav>
-  <h1>All Merchants</h1>
+  <div class="title_on_page_background">
+    <section class="title_on_page">
+      <h1>Avalon&#39;s Altar Complete Merchant List</h1>
+    </section>
+  </div>
   <a href="/merchants/new">Create a merchant</a>
   <section class="container">
   <% @merchants.each do |merchant| %>
@@ -32,4 +37,5 @@
     <% end %>
   </section>
 </div>
+</body>
 </html>

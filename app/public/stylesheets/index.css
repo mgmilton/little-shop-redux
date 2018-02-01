@@ -5,19 +5,31 @@ html, body {
 	color: #AAC4B4;
 }
 
+img.resize {
+  max-width:50%;
+  max-height:50%;
+}
+
+body {
+	background: #f4fdd933 url( "/images/mandala_background.png") no-repeat center center fixed;
+	background-size: 50%;
+}
+
 .merch_id_link a {
 	text-decoration: none;
 }
 
-.box {
+.title_on_page_background {
+	background-color: #F0A868;
+	color: #87a593;
+	opacity: .96;
+}
+
+.title_on_page h1 {
 	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	flex-direction: column;
-	max-width: 500px;
-	border: 25px solid #F9CBC7;
-	padding: 25px;
-	margin: 0 auto;
+	justify-content: center;
+	font-weight: bold;
+	font-size: 50px;
 }
 
 .navbar {
@@ -40,12 +52,12 @@ html, body {
 }
 
 .navbar a {
-	    display: block;
-	    color: #AAC4B4;
-	    text-decoration: none;
-	    font-size: 17px;
-	    transition-duration: 2.5s;
-	    padding: 9px 5px 8px 7px;
+  display: block;
+  color: #AAC4B4;
+  text-decoration: none;
+  font-size: 17px;
+  transition-duration: 2.5s;
+  padding: 9px 5px 8px 7px;
 }
 
 .navbar a:hover {
