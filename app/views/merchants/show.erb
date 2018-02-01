@@ -7,15 +7,25 @@
     <link rel="stylesheet" href="/stylesheets/show.css">
     <link rel="shortcut icon" type="image/x-icon" href="/images/om-favicon.ico">
   </head>
-  <nav class="navbar">
-    <h1><a href="/">Home</a></h1>
-    <h1><a href="/merchants">All Merchants</a></h1>
-    <h1><a href="/items">All Items</a></h1>
-    <h1><a href="/categories">Categories</a></h1>
-  </nav>
   <body>
-    <h1> merchant </h1>
-    <h1><%= @merchant.name %></h1>
-    <p><%= @merchant.id %></p>
+    <div class="fixed_nav_merchant_index">
+      <nav class="navbar">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/merchants">All Merchants</a></li>
+          <li><a href="/items">All Items</a></li>
+          <li><a href="/categories">Categories</a></li>
+        </ul>
+      </nav>
+      <div class="title_on_page_background">
+        <section class="title_on_page">
+          <h1>Avalon&#39;s Altar Complete Merchant List</h1>
+        </section>
+      </div>
+      <div class="merch_name">
+        <h1> merchant </h1>
+        <h1><%= @merchant.name %></h1>
+        <p><%= @merchant.id %></p>
+      </div>
   </body>
 </html>
