@@ -21,6 +21,7 @@
         <li><%= @item.name %></li>
         <li><%= @item.price %></li>
       </ul>
+      <div class="all_merchants_breakdown"
     <p>Most Item Merchants</p>
     <ul>
 
@@ -29,15 +30,20 @@
     <li>Item Count: <%= merchant.total_items %></li>
     <br/>
     <% end %>
+  </div>
   </ul>
     <div class="all_merchants_breakdown"
       <p>Merchant / Item Breakdown</p>
         <% @merchants.each do |merchant| %>
-        <ul>
+        <div class="each_merchant">
+
+        </div>
+        <ol>
           <li>Merchant Name: <%= merchant.name %></li>
           <li>Item Count: <%= merchant.items.count%></li>
           <li>Sum Price Of All Items: <%= merchant.item_total_sum %></li>
-        </ul>
+        </ol>
         <% end %>
+      </div>
     </div>
 </html>
