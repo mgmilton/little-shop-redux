@@ -64,13 +64,13 @@ input {
 	color: #AAC4B4;
 }
 
-ul {
+.dropdown_selectors {
 		float: right;
     list-style-type: none;
     margin: 0px;
     padding: 10px;
+		margin-right: 150px;
     overflow: hidden;
-
 }
 
 li {
