@@ -3,7 +3,7 @@ describe "As a user" do
     it "I can see and click new category link and go to new category page from link" do
       visit '/categories'
 
-      click_on "Create a category"
+      click_button("Create A Category")
 
       expect(current_path).to eq('/categories/new')
     end
@@ -17,7 +17,7 @@ describe "As a user" do
 
       expect(current_path).to eq("/categories")
       expect(page.status_code).to eq(200)
-      expect(page).to have_content("All Categories")
+      expect(page).to have_content("Avalon's Altar Complete Categories List")
       expect(page).to have_content("Food")
       expect(Category.count).to eq(3)
     end
