@@ -10,9 +10,16 @@ img.resize {
   max-height:50%;
 }
 
-body {
-	background: #f4fdd933 url( "/images/mandala_background.png") no-repeat center center fixed;
-	background-size: 50%;
+
+.box {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	flex-direction: column;
+	max-width: 500px;
+	border: 25px solid #F9CBC7;
+	padding: 25px;
+	margin: 0 auto;
 }
 
 .merch_id_link a {
