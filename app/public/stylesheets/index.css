@@ -95,7 +95,7 @@ body {
 }
 
 .card:hover {
-    box-shadow: 0 16px 16px 0 rgba(0,0,0,0.2)
+  box-shadow: 0 16px 16px 0 rgba(0,0,0,0.2)
 }
 
 .container_items {
@@ -109,11 +109,11 @@ body {
 
 
 .container {
-    padding: 2px 16px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-		padding-top: 50px;
+  padding: 2px 16px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+	padding-top: 50px;
 }
 
 .container p {

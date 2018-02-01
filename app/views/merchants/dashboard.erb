@@ -27,7 +27,6 @@
     <p>Golden Merchant</p>
     <article class="card">
       <ul>
-
         <li><%= @golden_merchant.name %></li>
         <li><%= @golden_merchant.id %></li>
         <li><%= @item.name %></li>
@@ -36,10 +35,8 @@
     </article>
     <p>Most Item Merchants</p>
     <ul>
-
     <% @high_item_merchant.each do |merchant| %>
     <article class="card">
-
     <li> <%=merchant.name%> </li>
     <li>Item Count: <%= merchant.total_items %></li>
     <br/>
@@ -49,7 +46,6 @@
       <p>Merchant / Item Breakdown</p>
         <% @merchants.each do |merchant| %>
         <article class="card">
-
         <ul>
           <li>Merchant Name: <%= merchant.name %></li>
           <li>Item Count: <%= merchant.items.count%></li>
