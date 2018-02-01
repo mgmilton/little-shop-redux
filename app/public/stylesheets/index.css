@@ -16,7 +16,7 @@ body {
 }
 
 .create_merch_button, .create_item_button {
-	margin-left: 50px;
+	margin-left: 30px;
 	position: fixed;
 	top: 120px;
 }

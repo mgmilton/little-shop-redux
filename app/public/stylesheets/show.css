@@ -50,7 +50,7 @@ ul {
 	color: black;
 }
 
-.title_on_page_background {
+.title_on_page_background, .merchant_info_on_page_background {
 	background-color: #F0A868;
   color: #87a593;
   opacity: .96;
