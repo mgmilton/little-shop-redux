@@ -31,7 +31,7 @@
   <section class="container">
   <% @merchants.each do |merchant| %>
       <article class="card">
-        <p class="merch_id_link"><a href="/merchants/<%= merchant.id %>"><%= merchant.name %></p>
+        <p class="merch_id_link"><a href="/merchants/<%= merchant.id %>"><%= merchant.name %></a></p>
         <div class="merchant<%= merchant.id %>">
         <a href="/merchants/<%= merchant.id  %>/edit">Edit</a>
         <form action="/merchants/<%= merchant.id %>" method="POST">

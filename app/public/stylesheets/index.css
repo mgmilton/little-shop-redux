@@ -15,13 +15,13 @@ body {
 	background-size: 50%;
 }
 
-.create_merch_button, .create_item_button {
+.create_merch_button, .create_item_button, .create_category_button {
 	margin-left: 30px;
 	position: fixed;
 	top: 120px;
 }
 
-.merch_id_link a {
+.merch_id_link, .cat_id_link a {
 	text-decoration: none;
 }
 
@@ -89,7 +89,7 @@ body {
 	padding-bottom: 20px;
 }
 
-.itemimage {
+.itemimage, .categoryimage {
 	width: 100%;
   height: 100px;
 }
