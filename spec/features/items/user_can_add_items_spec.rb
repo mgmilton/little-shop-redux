@@ -4,7 +4,7 @@ describe "As a user" do
       Item.create(name: "A whole new item")
       visit '/items'
 
-      click_link 'Create an item'
+      click_button('Create An Item')
       expect(current_path).to eq('/items/new')
       expect(page.status_code).to eq(200)
     end

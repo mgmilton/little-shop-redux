@@ -7,10 +7,10 @@ describe "As a user" do
       expect(page.status_code).to eq(200)
     end
 
-    it "has a create item link" do
+    it "has a create item button" do
       visit('/items')
 
-      expect(page).to have_content('Create an item')
+      click_button('Create An Item')
       expect(page.status_code).to eq(200)
     end
 

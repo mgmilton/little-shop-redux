@@ -3,7 +3,7 @@ describe "As a user" do
     it "I can see and click new merchant link and go to the new merchant page from link" do
       visit '/merchants'
 
-      click_on 'Create a merchant'
+      click_button('Create A Merchant')
 
       expect(current_path).to eq('/merchants/new')
     end
